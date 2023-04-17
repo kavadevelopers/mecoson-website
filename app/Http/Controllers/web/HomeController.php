@@ -10,6 +10,7 @@ class HomeController extends Controller
     
 
     public function home(){
-        return view('web.home');
+        $data['_title'] = 'Home';
+        return view('web.home')->with($data);
     }
 }
