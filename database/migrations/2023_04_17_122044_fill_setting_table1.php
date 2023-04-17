@@ -13,7 +13,14 @@ return new class extends Migration
     public function up(): void
     {
         $data = [
-            ['item' => 'app_name', 'value' => 'Mecoson Labs']
+            ['item' => 'app_name', 'value' => 'Mecoson Labs'],
+            ['item' => 'smtp_host', 'value' => ''],
+            ['item' => 'smtp_user', 'value' => ''],
+            ['item' => 'smtp_password', 'value' => ''],
+            ['item' => 'smtp_port', 'value' => ''],
+            ['item' => 'smtp_from_email', 'value' => ''],
+            ['item' => 'smtp_from_name', 'value' => ''],
+            ['item' => 'is_maintanance', 'value' => '0']
         ];
 
 

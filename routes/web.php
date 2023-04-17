@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\PagesController;
+use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\web\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +19,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('', [HomeController::class,'home']);
+
+
+Route::prefix('admin')->group(function(){
+    Route::group(['middleware' => ['isGuest']],function(){
+        Route::get('', [AuthController::class,'login']);
+        Route::get('login', [AuthController::class,'login']);
+        Route::post('login', [AuthController::class,'loginPost']);
+    });    
+
+    Route::group(['middleware' => ['isAdmin']],function(){
+        Route::get('dashboard', [DashboardController::class,'index']);
+        
+        Route::prefix('settings')->group(function(){
+            Route::get('', [SettingController::class,'index']);
+            Route::post('', [SettingController::class,'save']);
+        });
+
+        Route::get('logout', [AuthController::class,'logout']);
+    });
+});
