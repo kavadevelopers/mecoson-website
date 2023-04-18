@@ -1,4 +1,10 @@
 <style>
+	h5{
+		font-weight: bold;
+	}
+	.form-group label{
+		font-weight: bold;
+	}
 	.list-image-thumbnail-100{
 		width: 100px;
 		height: 100px;

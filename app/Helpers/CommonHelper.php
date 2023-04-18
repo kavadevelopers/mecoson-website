@@ -45,6 +45,10 @@ class CommonHelper
         return Auth::guard('admin')->user();
     }
 
+    public static function getUser(){
+        return Auth::guard('admin')->user();
+    }
+
     public static function admin($link = false){
         if ($link) {
             return url('admin/'.$link);

@@ -30,6 +30,81 @@
                                 <input name="app_name" type="text" class="form-control" value="{{ CommonHelper::setting('app_name') }}" placeholder="App Name" required>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Contact Mobile <span class="-req">*</span></label>
+                                <input name="web_mobile" type="text" class="form-control" value="{{ CommonHelper::setting('web_mobile') }}" placeholder="Contact Mobile" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Contact Email <span class="-req">*</span></label>
+                                <input name="web_email" type="text" class="form-control" value="{{ CommonHelper::setting('web_email') }}" placeholder="Contact Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Contact Address <span class="-req">*</span></label>
+                                <input name="web_address" type="text" class="form-control" value="{{ CommonHelper::setting('web_address') }}" placeholder="Contact Address" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Google Map Embedded Url<span class="-req">*</span></label>
+                                <input name="web_google_map_url" type="text" class="form-control" value="{{ CommonHelper::setting('web_google_map_url') }}" placeholder="Google Map Embedded Url" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Social Media Urls</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Facebook</label>
+                                <input name="so_facebook_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_facebook_url') }}" placeholder="Facebook">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Instagram</label>
+                                <input name="so_instagram_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_instagram_url') }}" placeholder="Instagram">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Twitter</label>
+                                <input name="so_twitter_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_twitter_url') }}" placeholder="Twitter">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Linked In</label>
+                                <input name="so_linkedin_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_linkedin_url') }}" placeholder="Twitter">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Youtube</label>
+                                <input name="so_youtube_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_youtube_url') }}" placeholder="Youtube">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Skype</label>
+                                <input name="so_skype_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_skype_url') }}" placeholder="Skype">
+                                <p><b>Note:</b> Leave empty if no need</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

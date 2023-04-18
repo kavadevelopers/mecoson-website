@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('', [HomeController::class,'home']);
+Route::get('home', [HomeController::class,'home']);
+Route::get('contact-us', [HomeController::class,'contact']);
+Route::get('about-us', [HomeController::class,'about']);
 
 
 Route::prefix('admin')->group(function(){
@@ -30,7 +33,13 @@ Route::prefix('admin')->group(function(){
 
     Route::group(['middleware' => ['isAdmin']],function(){
         Route::get('dashboard', [DashboardController::class,'index']);
+        Route::get('profile', [DashboardController::class,'profile']);
         
+        Route::prefix('profile')->group(function(){
+            Route::get('', [DashboardController::class,'profile']);
+            Route::post('', [DashboardController::class,'saveProfile']);
+        });
+
         Route::prefix('settings')->group(function(){
             Route::get('', [SettingController::class,'index']);
             Route::post('', [SettingController::class,'save']);
