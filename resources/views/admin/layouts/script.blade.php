@@ -20,6 +20,23 @@
 			return false;
 		});
 
+        $(document).on('click','.inline-readmore', function(event){	
+        	if($(this).prev().is(":visible")){
+        		$(this).prev('.full-string-span').hide();
+        		$(this).html('<small>...more</small>');
+        	}else{
+        		$(this).prev('.full-string-span').show();
+        		$(this).html('<small> less</small>');
+        	}
+        	event.preventDefault();
+        });
+
+        $(document).on('click','.read-more-popup-btn', function(event){
+        	event.preventDefault();
+        	$('#modalFullStringText').html($(this).data('full'));
+        	$('#modalFullString').modal('show');
+        });
+
         $(document).on('click','.photo-swipe', function(event){
             var stringAr = $(this).data('photoswipe').split('+');
             var items = [];
@@ -138,4 +155,70 @@
             }
         }
     }
+
+    var editor_config = {
+        path_absolute : "{{ url('/') }}",
+        height: 500,    
+        selector: 'textarea.tinymceeditor',
+        relative_urls: false,
+        plugins: [
+              "advlist autolink lists link charmap print preview hr anchor pagebreak",
+              "searchreplace wordcount visualblocks visualchars code fullscreen",
+              "insertdatetime nonbreaking save table directionality",
+              "emoticons template paste textpattern"
+        ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link",
+        relative_urls: false,
+        file_picker_callback : function(callback, value, meta) {
+            var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+            var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+
+            var cmsURL = editor_config.path_absolute + '/filemanager?editor=tinymce5';
+      
+              if (meta.filetype == 'image') {
+                cmsURL = cmsURL + "&type=Images";
+              } else {
+                cmsURL = cmsURL + "&type=Files";
+              }
+
+            tinyMCE.activeEditor.windowManager.openUrl({
+                url : cmsURL,
+                title : 'Gallery',
+                width : x * 0.8,
+                height : y * 0.8,
+                resizable : "yes",
+                close_previous : "no",
+                onMessage: (api, message) => {
+                  callback(message.content);
+                  myConsole(message);
+                }
+            });
+        }
+    };
+    tinymce.init(editor_config);
+
+    function fileExAllowed(input,types) {
+        if (input.files && input.files[0]) {
+            var FileSize = input.files[0].size / 1024 / 1024; // in MB
+            var extension = input.files[0].name.substring(input.files[0].name.lastIndexOf('.')+1);
+            if (FileSize > 10) {
+                PNOTY("Maxiumum File Size Is 2 Mb.",'error');
+                input.value = '';
+                return false;
+            }else{
+                typesAr = types.replaceAll('.','').split(',');
+                if (isInArray(typesAr,extension)) {
+                    return true;
+                }else{
+                    PNOTY('Only Allowed '+types+' Extension','error');
+                    input.value = '';
+                    return false;
+                }
+            }
+        }
+    }
+
+    function isInArray(array, search){
+	    return array.indexOf(search) >= 0;
+	}
 </script>

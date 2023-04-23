@@ -198,12 +198,12 @@
         <script type="text/javascript" src="{{ url('themes/admin/assets/photoswipe/photoswipe-ui-default.min.js') }}"></script>
 
         <script type="text/javascript" src="{{ url('themes/js/master.js') }}"></script>
+        <script src="{{ url('themes/admin/assets/tinymce/tinymce.min.js') }}"></script>
 
         
-
+        
         @include('admin.layouts.script')
         @include('admin.layouts.modals')
-
         <script type="text/javascript">
             @if (Session::has('error'))
                 PNOTY('{{ Session::get("error") }}','error');

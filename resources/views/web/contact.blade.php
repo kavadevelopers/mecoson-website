@@ -66,45 +66,41 @@
             <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-6">
                 <div class="contact-form">
                     <h3>Drop Us A Message</h3>
-                    <form method="post">
+                    <form method="post" action="" >
+                        @csrf
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Your Name</label>
-                                    <input type="text" name="name" id="name" class="form-control" required="" data-error="Please enter your name" placeholder="Name">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Your Email</label>
-                                    <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Your Phone</label>
-                                    <input type="tel" name="phone" id="phone" class="form-control" required="" data-error="Please enter your phone" placeholder="Phone">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="phone" maxlength="10" minlength="10" class="form-control numbers" placeholder="Phone" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject" placeholder="Subject">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Your Message</label>
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="8" required="" data-error="Write your message" placeholder="Message"></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="message" class="form-control" cols="30" rows="8" placeholder="Message" required></textarea>
                                 </div>
                             </div>
 
@@ -112,7 +108,6 @@
                                 <button type="submit" class="default-btn">
                                     Send Message
                                 </button>
-                                <div id="msgSubmit" class="h3 text-center hidden"></div>
                                 <div class="clearfix"></div>
                             </div>
                         </div>

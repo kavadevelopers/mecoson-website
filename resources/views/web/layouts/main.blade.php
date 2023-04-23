@@ -38,6 +38,10 @@
 		<link rel="stylesheet" href="{{ url('themes/web/assets/css/responsive.css') }}">
 
         @include('web.layouts.style')
+
+		@php
+			$products = App\Models\ProductModel::select('name','slug')->orderby('name','asc')->get();
+		@endphp
     </head>
 
     <body>
@@ -142,35 +146,22 @@
 												About Us
 											</a>
 										</li>
+										@if(count($products) > 0)
+											<li class="nav-item">
+												<a href="#" class="nav-link">
+													Products
+													<i class="bx bx-plus"></i>
+												</a>
 
-										<li class="nav-item">
-											<a href="#" class="nav-link">
-												Products
-												<i class="bx bx-plus"></i>
-											</a>
-
-											<ul class="dropdown-menu">
-												<li class="nav-item">
-													<a href="department-grid.html" class="nav-link">Department Grid</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="department-slider.html" class="nav-link">Department Slider</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="department-details-left-sidebar.html" class="nav-link">Department Details Left Sidebar</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="department-details-right-sidebar.html" class="nav-link">Department Details Right Sidebar</a>
-												</li>
-
-												<li class="nav-item">
-													<a href="department-details-no-sidebar.html" class="nav-link">Department Details No Sidebar</a>
-												</li>
-											</ul>
-										</li>
+												<ul class="dropdown-menu">
+													@foreach ($products as $product)
+														<li class="nav-item">
+															<a href="{{ url('product/'.$product->slug) }}" class="nav-link">{{ $product->name }}</a>
+														</li>	
+													@endforeach
+												</ul>
+											</li>
+										@endif
 
 										<li class="nav-item">
 											<a href="{{ url('career') }}" class="nav-link">
@@ -417,6 +408,19 @@
         <!-- CUSTOM JS -->
 		<script src="{{ url('themes/web/assets/js/custom.js') }}"></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script type="text/javascript" src="{{ url('themes/js/master.js') }}"></script>
+
         @include('web.layouts.script')
+
+		<script type="text/javascript">
+            @if(Session::has('error'))
+                notifyF("{{ Session::get('error') }}",'error');
+            @endif
+            @if(Session::has('success'))
+                notifyF("{{ Session::get('success') }}",'msg');
+            @endif
+        </script>
+
     </body>
 </html>

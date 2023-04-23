@@ -37,7 +37,35 @@
                 </a>
             </li>
 
+            <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu {{ CommonHelper::adminMenu(2,['enquiries'])[2] }}">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="fa fa-book"></i></span>
+                        <span class="pcoded-mtext">Enquiries</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="{{ CommonHelper::adminMenu(3,['contact'],'enquiries')[1] }}">
+                            <a href="{{ CommonHelper::admin('enquiries/contact') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Contact</span>
+                            </a>
+                        </li>
+                        <li class="{{ CommonHelper::adminMenu(3,['product'],'enquiries')[1] }}">
+                            <a href="{{ CommonHelper::admin('enquiries/product') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Product</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
             
+            <li class="{{ CommonHelper::adminMenu(2,['products'])[2] }}">
+                <a href="{{ CommonHelper::admin('products') }}">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                    <span class="pcoded-mtext">Products</span>
+                </a>
+            </li>
 
             @if (CommonHelper::hasPermission([2,3]) || Auth::guard('admin')->user()->admin_type == '0')
                 <li class="{{ CommonHelper::adminMenu(2,['settings'])[2] }}">
@@ -47,6 +75,8 @@
                     </a>
                 </li>
             @endif
+
+            
 
             <li class="">
                 <a href="{{ CommonHelper::admin('logout') }}">

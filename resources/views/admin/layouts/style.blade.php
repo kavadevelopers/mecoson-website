@@ -1,4 +1,11 @@
 <style>
+	.change-image-lable{
+		color: #fd6e56;
+		cursor: pointer;
+	}
+	.card-footer{
+		background-color: #f6f6f6 !important;
+	}
 	h5{
 		font-weight: bold;
 	}
@@ -25,7 +32,6 @@
 
 	.list-image-thumbnail-landscap{
 		width: 100px;
-		height: 70px;
 		object-fit: cover;
 	    object-position: center;
 		border: solid 1px #ccc;
