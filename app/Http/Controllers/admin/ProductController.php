@@ -15,7 +15,7 @@ class ProductController extends Controller
 
     public function index(){
         $data['_title'] = 'Products List';
-        $data['list']	 = ProductModel::orderby('id','desc')->get();
+        $data['list']	 = ProductModel::orderby('id','desc')->with('_category')->get();
 		return view('admin.user.products.index',$data);
     }
 
@@ -50,6 +50,7 @@ class ProductController extends Controller
 
         
         $data = [
+            'category'          => $rec->category,
             'name'              => $rec->name,
             'slug'              => CommonHelper::productSlug($rec->name),
             'price'             => CommonHelper::isColValueDecInt($rec->price), 
@@ -68,6 +69,7 @@ class ProductController extends Controller
         $row = ProductModel::find($rec->item);
         if($row){
             
+            $row->category = $rec->category;
             $row->name = $rec->name;
             $row->short_description = $rec->short_description;
             $row->long_description  = CommonHelper::isColValue($rec->long_description);

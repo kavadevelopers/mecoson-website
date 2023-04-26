@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="{{ url('themes/logos/favicon.png') }}">
 		<!-- TITLE -->
 		<title>{{ isset($_title) ? $_title.' | ':'' }}{{ CommonHelper::setting('app_name') }}</title>
-
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 		<!-- BOOTSTRAP MIN CSS --> 
 		<link rel="stylesheet" href="{{ url('themes/web/assets/css/bootstrap.min.css') }}">
 		<!-- OWL THEME DEFAULT MIN CSS --> 
@@ -40,7 +40,7 @@
         @include('web.layouts.style')
 
 		@php
-			$products = App\Models\ProductModel::select('name','slug')->orderby('name','asc')->get();
+			$categories = App\Models\MasterCategories::select('name','id','slug')->orderby('sort','asc')->get();
 		@endphp
     </head>
 
@@ -49,8 +49,7 @@
 		<!-- START PRELOADER AREA -->
 		<div class="preloader">
 			<div class="lds-ripple">
-				<div></div>
-				<div></div>
+				<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kmemgsc8.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
 			</div>
 		</div>
 		<!-- END PRELOADER AREA -->
@@ -130,7 +129,7 @@
 						<nav class="navbar navbar-expand-md">
 							<div class="container">
 								<a class="navbar-brand" href="{{ url('') }}">
-									<img src="{{ url('themes/logos/logo.png') }}" alt="Logo">
+									<img src="{{ url('themes/logos/logo-footer.png') }}" alt="Logo">
 								</a>
 								
 								<div class="collapse navbar-collapse mean-menu">
@@ -146,17 +145,34 @@
 												About Us
 											</a>
 										</li>
-										@if(count($products) > 0)
+										@if(count($categories) > 0)
 											<li class="nav-item">
-												<a href="#" class="nav-link">
+												<a href="{{ url('products') }}" class="nav-link">
 													Products
 													<i class="bx bx-plus"></i>
 												</a>
 
 												<ul class="dropdown-menu">
-													@foreach ($products as $product)
+													@foreach ($categories as $category)
+														@php
+															$products = App\Models\ProductModel::select('name','id','slug')->where('category',$category->id)->orderby('name','asc');
+														@endphp
 														<li class="nav-item">
-															<a href="{{ url('product/'.$product->slug) }}" class="nav-link">{{ $product->name }}</a>
+															<a href="{{ url('product/'.$category->slug) }}" class="nav-link">
+																{{ $category->name }}
+																@if ($products->count() > 0)
+																	<i class="bx bx-plus"></i>
+																@endif
+															</a>
+															@if ($products->count() > 0)
+																<ul class="dropdown-menu">
+																	@foreach ($products->get() as $product)
+																		<li class="nav-item">
+																			<a href="{{ url('product/'.$product->slug) }}" class="nav-link">{{ $product->name }}</a>
+																		</li>	
+																	@endforeach
+																</ul>
+															@endif
 														</li>	
 													@endforeach
 												</ul>
@@ -209,10 +225,10 @@
 					<div class="col-lg-3 col-md-6">
 						<div class="single-widget">
 							<a href="{{ url('') }}">
-								<img src="{{ url('themes/logos/logo.png') }}" alt="Image">
+								<img src="{{ url('themes/logos/logo-footer.png') }}" alt="Image">
 							</a>
 
-							<p>Lorem ipsum dolor, sit amet earum consectetur adipisicing elit. Cupiditate rerum quidem fugiat sapiente! Iusto quae perspiciatis amet earum consectetur</p>
+							<p>We pursue diversity in our workforce, our markets, and in our services because we recognize that optimum solutions require different backgrounds, new perspectives, and open minds.</p>
 
 							<div class="social-area">
 								<ul>
@@ -265,37 +281,52 @@
 					
 					<div class="col-lg-3 col-md-6">
 						<div class="single-widget">
-							<h3>Departments</h3>
+							<h3>Navigation</h3>
 
 							<ul>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Medicine
+									<a href="{{ url('home') }}">
+										Home
 									</a>
 								</li>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Neurology
+									<a href="{{ url('about-us') }}">
+										About us
 									</a>
 								</li>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Eye Care 
+									<a href="{{ url('') }}">
+										Vision & Mission
 									</a>
 								</li>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Cardiology
+									<a href="{{ url('') }}">
+										Quality Assurance
 									</a>
 								</li>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Dental Care
+									<a href="{{ url('') }}">
+										Products
 									</a>
 								</li>
 								<li>
-									<a href="department-details-right-sidebar.html">
-										Pulmonary       
+									<a href="{{ url('') }}">
+										Downloads       
+									</a>
+								</li>
+								<li>
+									<a href="{{ url('') }}">
+										Career     
+									</a>
+								</li>
+								<li>
+									<a href="{{ url('') }}">
+										News & Events
+									</a>
+								</li>
+								<li>
+									<a href="{{ url('contact-us') }}">
+										Contact Us
 									</a>
 								</li>
 							</ul>
@@ -303,26 +334,14 @@
 					</div>
 
 					<div class="col-lg-3 col-md-6">
-						<div class="single-widget open-time">
-							<h3>Opening Hours</h3>
-
+						<div class="single-widget">
+							<h3>Product Category</h3>
 							<ul>
-								<li>
-									<span>Mon-Tue:</span>
-									<span class="right">6:00AM-10:00PM</span>
-								</li>
-								<li>
-									<span>Wed-Thu:</span>
-									<span class="right">6:00AM-10:00PM</span>
-								</li>
-								<li>
-									<span>Fri:</span>
-									<span class="right">6:00AM-04:00PM</span>
-								</li>
-								<li>
-									<span>Sun:</span>
-									<span class="right">Closed</span>
-								</li>
+								@foreach ($categories as $category)
+									<li>
+										<a href="{{ url('category/'.$category->slug) }}">{{ $category->name }}</a>
+									</li>	
+								@endforeach
 							</ul>
 						</div>
 					</div>
@@ -421,6 +440,8 @@
                 notifyF("{{ Session::get('success') }}",'msg');
             @endif
         </script>
-
+		<!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/39603438.js"></script>
+        <!-- End of HubSpot Embed Code -->
     </body>
 </html>

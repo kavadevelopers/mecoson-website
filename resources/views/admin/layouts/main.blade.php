@@ -87,7 +87,7 @@
                                 <i class="feather icon-menu"></i>
                             </a>
                             <a href="{{ url(CommonHelper::admin('dashboard')) }}">
-                                <img class="img-fluid" src="{{ url('themes/logos/logo.png') }}" alt="Theme-Logo">
+                                <img class="img-fluid" src="{{ url('themes/logos/logo-footer.png') }}" alt="Theme-Logo">
                             </a>
                             <a class="mobile-options">
                                 <i class="feather icon-more-horizontal"></i>
@@ -212,6 +212,8 @@
                 PNOTY('{{ Session::get("success") }}','success');
             @endif
         </script>
+
+        
     </body>
 </html>
 

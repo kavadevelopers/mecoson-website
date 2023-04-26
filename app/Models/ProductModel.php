@@ -9,9 +9,14 @@ class ProductModel extends Model
 {
     use HasFactory;
 
+    public function _category(){
+        return $this->hasOne(MasterCategories::class, 'id', 'category');
+    }
+
     protected $table = 'products';
 
     protected $fillable = [
+        'category',
         'name',
         'slug',
         'image',

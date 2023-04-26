@@ -50,8 +50,71 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Google Map Embedded Url<span class="-req">*</span></label>
+                                <label>Google Map Embedded Url <span class="-req">*</span></label>
                                 <input name="web_google_map_url" type="text" class="form-control" value="{{ CommonHelper::setting('web_google_map_url') }}" placeholder="Google Map Embedded Url" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>PCD PHARMA FRANCHISE DOMESTIC SALES</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Phone <span class="-req">*</span></label>
+                                <input name="pcd_phone" type="text" class="form-control" value="{{ CommonHelper::setting('pcd_phone') }}" placeholder="Phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Email <span class="-req">*</span></label>
+                                <input name="pcd_email" type="email" class="form-control" value="{{ CommonHelper::setting('pcd_email') }}" placeholder="Email" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>EXPORTS</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Phone <span class="-req">*</span></label>
+                                <input name="exp_phone" type="text" class="form-control" value="{{ CommonHelper::setting('exp_phone') }}" placeholder="Phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Email <span class="-req">*</span></label>
+                                <input name="exp_email" type="email" class="form-control" value="{{ CommonHelper::setting('exp_email') }}" placeholder="Email" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5>ACCOUNTS & LOGISTICS</h5>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Phone <span class="-req">*</span></label>
+                                <input name="acc_phone" type="text" class="form-control" value="{{ CommonHelper::setting('acc_phone') }}" placeholder="Phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Email <span class="-req">*</span></label>
+                                <input name="acc_email" type="email" class="form-control" value="{{ CommonHelper::setting('exp_email') }}" placeholder="Email" required>
                             </div>
                         </div>
                     </div>

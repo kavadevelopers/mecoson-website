@@ -4,12 +4,17 @@ namespace App\Helpers;
 use Illuminate\Support\Str;
 use App\Models\ProductModel;
 use App\Models\GlobalSettings;
+use App\Models\MasterCategories;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Storage;
 
 class CommonHelper
 {
+
+    public static function getCategoryById($id){
+        return MasterCategories::where('id',$id)->first();
+    }
 
     public static function moneyFormatIndia($amount,$remDec = false){
         $amount = round($amount,2);
@@ -81,11 +86,37 @@ class CommonHelper
             return "{$slug}-2";
         }
         return $slug;
-    }    
+    }   
+    
+    public static function categorySlug($name,$id = false){
+        if($id){
+            $exists = MasterCategories::where('slug',$slug = Str::slug($name))->where('id','!=',$id)->exists();
+        }else{
+            $exists = MasterCategories::where('slug',$slug = Str::slug($name))->exists();
+        }
+        if ($exists) {
+            $max = MasterCategories::where('name',$name)->latest('id')->skip(1)->value('slug');
+            if (isset($max[-1]) && is_numeric($max[-1])) {
+                return preg_replace_callback('/(\d+)$/', function($mathces) {
+                    return $mathces[1] + 1;
+                }, $max);
+            }
+            return "{$slug}-2";
+        }
+        return $slug;
+    }   
 
     public static function getProductImage($item){
         if(Storage::disk('public_upload')->exists('products/'.$item)){
             return url('uploads/products/'.$item);
+        }else{
+            return url('themes/thumbs/land.jpg');
+        }
+    }
+
+    public static function getHomeBanner($item){
+        if(Storage::disk('public_upload')->exists('cms/homebanner/'.$item)){
+            return url('uploads/cms/homebanner/'.$item);
         }else{
             return url('themes/thumbs/land.jpg');
         }

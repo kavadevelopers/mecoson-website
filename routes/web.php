@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\CMSController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\PagesController;
 use App\Http\Controllers\admin\ProductController;
@@ -29,6 +30,9 @@ Route::prefix('contact-us')->group(function(){
 
 Route::get('about-us', [HomeController::class,'about']);
 
+Route::get('category/{slug}', [HomeController::class,'category']);
+
+Route::get('products', [HomeController::class,'products']);
 Route::get('product/{slug}', [HomeController::class,'product']);
 Route::post('product-enquiry', [HomeController::class,'enquiry']);
 
@@ -70,6 +74,22 @@ Route::prefix('admin')->group(function(){
             Route::post('update', [ProductController::class,'update']);
 
             Route::get('delete/{id}', [ProductController::class,'delete']);
+        });
+
+        Route::prefix('cms')->group(function(){
+            Route::prefix('home-sliders')->group(function(){
+                Route::get('', [CMSController::class,'homeSlidersList']);
+                Route::get('{id}', [CMSController::class,'homeSlidersDelete']);
+                Route::post('', [CMSController::class,'homeSlidersSave']);
+            });
+
+            Route::prefix('categories')->group(function(){
+                Route::get('', [CMSController::class,'categoriesList']);
+                Route::get('{id}', [CMSController::class,'categoriesDelete']);
+                Route::get('edit/{id}', [CMSController::class,'categoriesEdit']);
+                Route::post('save', [CMSController::class,'categoriesSave']);
+                Route::post('update', [CMSController::class,'categoriesUpdate']);
+            });
         });
 
         Route::prefix('settings')->group(function(){

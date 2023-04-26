@@ -78,7 +78,7 @@ a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-decoration: none;
-  color: #19ce67;
+  color: #107dac;
 }
 
 a:hover {
@@ -132,7 +132,7 @@ h3 {
 
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .owl-theme .owl-dots {
@@ -151,11 +151,11 @@ h3 {
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #19ce67;
+  background-color: #107dac;
   width: 30px;
 }
 
@@ -213,7 +213,7 @@ ul {
   -webkit-box-shadow: unset;
           box-shadow: unset;
   outline: 0;
-  border: 1px solid #19ce67;
+  border: 1px solid #107dac;
 }
 
 .form-control:hover:focus, .form-control:focus {
@@ -283,7 +283,7 @@ textarea.form-control {
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #19ce67;
+  background-color: #107dac;
   margin-bottom: -6px;
   font-weight: 500;
 }
@@ -309,7 +309,7 @@ textarea.form-control {
 }
 
 .default-btn.active::before {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .default-btn:hover {
@@ -327,7 +327,7 @@ textarea.form-control {
 <<<<======================================================>>>>*/
 .read-more {
   line-height: 1;
-  color: #19ce67;
+  color: #107dac;
   font-weight: 500;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -390,7 +390,7 @@ textarea.form-control {
 }
 
 .header-area .heading-left-part li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .header-area .heading-left-part li i {
@@ -399,7 +399,7 @@ textarea.form-control {
   height: 30px;
   line-height: 30px;
   background-color: #def5ee;
-  color: #19ce67;
+  color: #107dac;
   border-radius: 50%;
   text-align: center;
   font-size: 16px;
@@ -412,7 +412,7 @@ textarea.form-control {
 }
 
 .header-area .heading-left-part li:hover i {
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
 }
 
@@ -435,7 +435,7 @@ textarea.form-control {
   height: 30px;
   line-height: 30px;
   background-color: #def5ee;
-  color: #19ce67;
+  color: #107dac;
   border-radius: 50%;
   text-align: center;
   font-size: 16px;
@@ -445,7 +445,7 @@ textarea.form-control {
 
 .header-area .heading-right-part li a:hover i {
   color: #ffffff;
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .header-area .heading-right-part li:first-child a {
@@ -485,7 +485,7 @@ textarea.form-control {
   top: -13px;
   width: 675px;
   height: 84px;
-  background-color: #19ce67;
+  background-color: #107dac;
   z-index: -1;
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
@@ -515,7 +515,7 @@ textarea.form-control {
   left: -5px;
   width: 2px;
   height: 60%;
-  background-color: #19ce67;
+  background-color: #107dac;
   z-index: -1;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
@@ -531,7 +531,7 @@ textarea.form-control {
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a:hover::before {
@@ -540,7 +540,7 @@ textarea.form-control {
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a.active {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item a.active::before {
@@ -559,7 +559,7 @@ textarea.form-control {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-radius: 0;
-  border-top: 2px solid #19ce67;
+  border-top: 2px solid #107dac;
   width: max-content;
   min-width: 250px;
 }
@@ -586,7 +586,7 @@ textarea.form-control {
   left: -1px;
   width: 2px;
   height: 100%;
-  background-color: #19ce67;
+  background-color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: scaleY(0);
@@ -604,7 +604,7 @@ textarea.form-control {
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover::before {
@@ -613,7 +613,7 @@ textarea.form-control {
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
@@ -670,7 +670,7 @@ textarea.form-control {
   display: block;
   margin-bottom: 10px;
   font-weight: 500;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .banner-content h1 {
@@ -698,7 +698,7 @@ textarea.form-control {
 }
 
 .about-content .top-title {
-  color: #19ce67;
+  color: #107dac;
   font-size: 14px;
   display: block;
   margin-bottom: 10px;
@@ -739,7 +739,7 @@ textarea.form-control {
   text-align: center;
   border-radius: 50%;
   font-size: 16px;
-  color: #19ce67;
+  color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: absolute;
@@ -748,7 +748,7 @@ textarea.form-control {
 }
 
 .about-content ul li:hover i {
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
@@ -759,7 +759,7 @@ textarea.form-control {
 }
 
 .about-content-two .top-title {
-  color: #19ce67;
+  color: #107dac;
   font-size: 14px;
   display: block;
   margin-bottom: 10px;
@@ -878,7 +878,7 @@ textarea.form-control {
   line-height: 60px;
   border-radius: 50%;
   text-align: center;
-  color: #19ce67;
+  color: #107dac;
   margin-bottom: 16px;
   font-size: 35px;
   -webkit-transition: all 0.5s;
@@ -899,7 +899,7 @@ textarea.form-control {
 }
 
 .single-features:hover i {
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
@@ -953,7 +953,7 @@ textarea.form-control {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #19ce67;
+  background-color: #107dac;
   border-radius: 4px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -964,7 +964,7 @@ textarea.form-control {
   font-size: 30px;
   display: inline-block;
   margin-bottom: 20px;
-  color: #19ce67;
+  color: #107dac;
   margin-bottom: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1066,11 +1066,11 @@ textarea.form-control {
 }
 
 .choose-tab .tabs li:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .choose-tab .tabs li.current {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .why-choose-wrap {
@@ -1204,8 +1204,8 @@ textarea.form-control {
 }
 
 .single-doctor ul li:hover {
-  background-color: #19ce67;
-  border-color: #19ce67;
+  background-color: #107dac;
+  border-color: #107dac;
 }
 
 .single-doctor ul li a {
@@ -1281,7 +1281,7 @@ textarea.form-control {
   top: -30px;
   left: 0;
   right: 0;
-  border: 1px solid #19ce67;
+  border: 1px solid #107dac;
   border-radius: 4px;
 }
 
@@ -1327,7 +1327,7 @@ textarea.form-control {
 
 .faq-accordion h2 span {
   display: inline-block;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .faq-accordion .accordion {
@@ -1371,7 +1371,7 @@ textarea.form-control {
 
 .faq-accordion .accordion .accordion-title.active i::before {
   content: "\eaf8";
-  color: #19ce67;
+  color: #107dac;
 }
 
 .faq-accordion .accordion .accordion-content {
@@ -1379,7 +1379,7 @@ textarea.form-control {
   position: relative;
   padding: 15px 20px;
   font-size: 15px;
-  border-top: 1px solid #19ce67;
+  border-top: 1px solid #107dac;
 }
 
 .faq-accordion .accordion .accordion-content.show {
@@ -1442,7 +1442,7 @@ textarea.form-control {
 }
 
 .single-blog .blog-content ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .single-blog .blog-content h3 {
@@ -1465,15 +1465,15 @@ textarea.form-control {
 }
 
 .single-blog:hover .blog-content a h3 {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .single-blog:hover .blog-content .read-more {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .single-blog:hover .blog-content .read-more i {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-wrap, .blog-sidebar-wrap {
@@ -1506,7 +1506,7 @@ textarea.form-control {
 .appointment-here-form .top-title {
   text-align: center;
   display: block;
-  color: #19ce67;
+  color: #107dac;
   font-size: 14px;
 }
 
@@ -1521,7 +1521,7 @@ textarea.form-control {
   left: 20px;
   line-height: 1;
   font-size: 18px;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .appointment-here-form .form-group .form-control {
@@ -1582,7 +1582,7 @@ textarea.form-control {
 }
 
 .table-condensed .prev:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .table-condensed .next {
@@ -1594,7 +1594,7 @@ textarea.form-control {
 }
 
 .table-condensed .next:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .table-condensed .day {
@@ -1607,7 +1607,7 @@ textarea.form-control {
 }
 
 .table-condensed .day:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .appointment-img {
@@ -1728,7 +1728,7 @@ textarea.form-control {
   margin-bottom: 30px;
   display: inline-block;
   color: #121521;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .single-widget p {
@@ -1761,7 +1761,7 @@ textarea.form-control {
 .single-widget ul li a:hover {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
-  color: #19ce67;
+  color: #107dac;
 }
 
 .single-widget .social-area {
@@ -1781,7 +1781,7 @@ textarea.form-control {
   width: 30px;
   height: 30px;
   line-height: 36px;
-  background-color: #19ce67;
+  background-color: #107dac;
   border-radius: 50px;
   text-align: center;
   color: #ffffff;
@@ -1817,7 +1817,7 @@ textarea.form-control {
   position: absolute;
   top: 4px;
   left: 0;
-  color: #19ce67;
+  color: #107dac;
   font-size: 20px;
 }
 
@@ -1831,7 +1831,7 @@ textarea.form-control {
   position: absolute;
   left: 0;
   top: 4px;
-  color: #19ce67;
+  color: #107dac;
   font-size: 20px;
 }
 
@@ -1844,7 +1844,7 @@ textarea.form-control {
 .single-widget.open-time li {
   padding-bottom: 15px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #19ce67;
+  border-bottom: 1px solid #107dac;
 }
 
 .single-widget.open-time li .right {
@@ -1880,7 +1880,7 @@ textarea.form-control {
 }
 
 .footer-bottom-area .copy-right p a {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .footer-bottom-area .copy-right p a:hover {
@@ -1904,7 +1904,7 @@ textarea.form-control {
 
 .single-counter i {
   background-color: #def5ee;
-  color: #19ce67;
+  color: #107dac;
   font-size: 30px;
   line-height: 1;
   display: block;
@@ -1918,7 +1918,7 @@ textarea.form-control {
 }
 
 .single-counter p {
-  color: #19ce67;
+  color: #107dac;
   line-height: 1;
   margin-bottom: 0;
   font-size: 18px;
@@ -1982,7 +1982,7 @@ textarea.form-control {
 
 .hero-slider-area .slider-item .slider-text .top-title {
   margin-top: -7px;
-  color: #19ce67;
+  color: #107dac;
   font-weight: 500;
   font-size: 15px;
   margin-bottom: 10px;
@@ -2056,7 +2056,7 @@ textarea.form-control {
 }
 
 .hero-slider-area .owl-next i {
-  color: #19ce67;
+  color: #107dac;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -2065,11 +2065,11 @@ textarea.form-control {
   transition: all 0.5s;
   font-size: 26px;
   border-radius: 4px;
-  border: 1px solid #19ce67;
+  border: 1px solid #107dac;
 }
 
 .hero-slider-area .owl-next i:hover {
-  background-color: #19ce67 !important;
+  background-color: #107dac !important;
   border-color: #ffffff;
   color: #ffffff;
 }
@@ -2088,7 +2088,7 @@ textarea.form-control {
 }
 
 .hero-slider-area .owl-prev i {
-  color: #19ce67;
+  color: #107dac;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -2097,11 +2097,11 @@ textarea.form-control {
   transition: all 0.5s;
   font-size: 26px;
   border-radius: 4px;
-  border: 1px solid #19ce67;
+  border: 1px solid #107dac;
 }
 
 .hero-slider-area .owl-prev i:hover {
-  background-color: #19ce67 !important;
+  background-color: #107dac !important;
   border-color: #ffffff;
   color: #ffffff;
 }
@@ -2242,7 +2242,7 @@ textarea.form-control {
   position: absolute;
   top: 7px;
   right: -7px;
-  background-color: #19ce67;
+  background-color: #107dac;
   width: 10px;
   height: 10px;
   -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
@@ -2258,11 +2258,11 @@ textarea.form-control {
 }
 
 .page-title-area .page-title-content ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .page-title-area .page-title-content ul .active {
-  color: #19ce67;
+  color: #107dac;
 }
 
 /*
@@ -2288,7 +2288,7 @@ textarea.form-control {
 }
 
 .blog-details-left-area .blog-details-single-post ul li i {
-  color: #19ce67;
+  color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -2308,17 +2308,17 @@ textarea.form-control {
 }
 
 .blog-details-left-area .blog-details-single-post ul li a i {
-  color: #19ce67;
+  color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .blog-details-left-area .blog-details-single-post ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-left-area .blog-details-single-post ul li a:hover i {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-left-area .blog-details-single-post ul li i {
@@ -2372,7 +2372,7 @@ textarea.form-control {
   left: 0;
   width: 2px;
   height: 100%;
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .blog-details-left-area .blockquote p {
@@ -2647,7 +2647,7 @@ textarea.form-control {
   bottom: -1px;
   width: 50px;
   height: 1px;
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.search-widget .search-form {
@@ -2665,7 +2665,7 @@ textarea.form-control {
 }
 
 .blog-details-right-area .blog-widget.search-widget .search-form .form-control:focus {
-  border-color: #19ce67;
+  border-color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.search-widget .search-form button {
@@ -2674,7 +2674,7 @@ textarea.form-control {
   right: 0;
   height: 50px;
   width: 50px;
-  background-color: #19ce67;
+  background-color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -2729,7 +2729,7 @@ textarea.form-control {
 }
 
 .blog-details-right-area .blog-widget.resent-post-widget ul li a h3:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.archives-widget ul li {
@@ -2758,11 +2758,11 @@ textarea.form-control {
 }
 
 .blog-details-right-area .blog-widget.archives-widget ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.archives-widget ul li a:hover span {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.categories-widget ul li {
@@ -2791,11 +2791,11 @@ textarea.form-control {
 }
 
 .blog-details-right-area .blog-widget.categories-widget ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.categories-widget ul li a:hover span {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.tags-widget ul li {
@@ -2815,7 +2815,7 @@ textarea.form-control {
 }
 
 .blog-details-right-area .blog-widget.tags-widget ul li:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .blog-details-right-area .blog-widget.tags-widget ul li:hover a {
@@ -2839,7 +2839,7 @@ textarea.form-control {
 
 .contact-info-area .single-contact-info i {
   display: block;
-  color: #19ce67;
+  color: #107dac;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-size: 25px;
@@ -2867,11 +2867,11 @@ textarea.form-control {
 }
 
 .contact-info-area .single-contact-info:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .contact-info-area .single-contact-info:hover i {
-  color: #19ce67;
+  color: #107dac;
   border-color: #ffffff;
   background-color: #ffffff;
 }
@@ -2924,7 +2924,7 @@ textarea.form-control {
   margin-top: 1px;
   margin-right: 10px;
   font-size: 20px;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .get-in-touch h3 {
@@ -2951,7 +2951,7 @@ textarea.form-control {
 .get-in-touch ul li span {
   font-size: 16px;
   font-weight: 600;
-  color: #19ce67;
+  color: #107dac;
   display: block;
   margin-bottom: 10px;
 }
@@ -2961,7 +2961,7 @@ textarea.form-control {
 }
 
 .get-in-touch ul li a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .contact-form h3 {
@@ -2993,19 +2993,19 @@ textarea.form-control {
 
 .contact-form-area .contact-form form input::-webkit-input-placeholder,
 .contact-form-area .contact-form form textarea::-webkit-input-placeholder {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .contact-form-area .contact-form form input::placeholder, 
 .contact-form-area .contact-form form textarea::placeholder {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .contact-form-area .contact-form form input:focus, 
 .contact-form-area .contact-form form textarea:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-color: #19ce67;
+  border-color: #107dac;
 }
 
 .contact-form-area .contact-form form input[type="submit"]:focus {
@@ -3019,9 +3019,9 @@ textarea.form-control {
 .contact-form-area .contact-form form input[type="submit"] {
   display: inline-block;
   text-align: center;
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #fff;
-  border: 2px solid #19ce67;
+  border: 2px solid #107dac;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
@@ -3051,8 +3051,8 @@ textarea.form-control {
 }
 
 .contact-form-area .contact-form form input[type="submit"]:hover {
-  color: #19ce67;
-  border: 2px solid #19ce67;
+  color: #107dac;
+  border: 2px solid #107dac;
   background-color: transparent !important;
 }
 
@@ -3133,7 +3133,7 @@ textarea.form-control {
 }
 
 .user-area-style .contact-form-action form .form-condition .agree-label a {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .user-area-style .contact-form-action form .form-group {
@@ -3151,13 +3151,13 @@ textarea.form-control {
 }
 
 .user-area-style .contact-form-action .account-desc a {
-  color: #19ce67;
+  color: #107dac;
   font-weight: 600;
 }
 
 .user-area-style .contact-form-action .forget {
   float: right;
-  color: #19ce67;
+  color: #107dac;
   font-weight: 600;
 }
 
@@ -3168,7 +3168,7 @@ textarea.form-control {
 }
 
 .user-area-style .contact-form-action .now-register a {
-  color: #19ce67;
+  color: #107dac;
 }
 
 /*
@@ -3191,7 +3191,7 @@ textarea.form-control {
 .error-area .error-content-wrap h1 {
   font-size: 300px;
   line-height: 1;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .error-area .error-content-wrap h3 {
@@ -3262,7 +3262,7 @@ textarea.form-control {
 }
 
 .single-shop .shop-content .price {
-  color: #19ce67;
+  color: #107dac;
   font-size: 20px;
 }
 
@@ -3292,7 +3292,7 @@ textarea.form-control {
 
 .single-shop .purchase-bar ul li a i {
   font-size: 20px;
-  color: #19ce67;
+  color: #107dac;
   background-color: #def5ee;
   display: inline-block;
   width: 40px;
@@ -3304,7 +3304,7 @@ textarea.form-control {
 }
 
 .single-shop .purchase-bar ul li a:hover i {
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
 }
 
@@ -3452,7 +3452,7 @@ textarea.form-control {
 }
 
 .cart-area .cart-table table tbody tr td.product-quantity .input-counter span:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .cart-area .cart-table table tbody tr td.product-quantity .input-counter span.minus-btn {
@@ -3615,9 +3615,9 @@ textarea.form-control {
   background: #ffffff;
   padding: 18px 20px 15px;
   margin-bottom: 65px;
-  border-top: 3px solid #19ce67;
+  border-top: 3px solid #107dac;
   position: relative;
-  color: #19ce67;
+  color: #107dac;
 }
 
 .checkout-area .user-actions::before {
@@ -3631,7 +3631,7 @@ textarea.form-control {
 }
 
 .checkout-area .user-actions i {
-  color: #19ce67;
+  color: #107dac;
   margin-right: 2px;
   font-size: 20px;
   position: relative;
@@ -3646,16 +3646,16 @@ textarea.form-control {
 
 .checkout-area .user-actions span a {
   display: inline-block;
-  color: #19ce67;
+  color: #107dac;
   font-size: 15px;
 }
 
 .checkout-area .user-actions span a:hover {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .checkout-area .user-actions span a:focus {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .checkout-area .checkout-area .title {
@@ -3718,7 +3718,7 @@ textarea.form-control {
 }
 
 .checkout-area .billing-details .form-group .nice-select .list .option:hover {
-  background-color: #19ce67 !important;
+  background-color: #107dac !important;
   color: #ffffff;
 }
 
@@ -3731,7 +3731,7 @@ textarea.form-control {
 }
 
 .checkout-area .billing-details .form-group .nice-select .option:hover, .checkout-area .billing-details .form-group .nice-select .option.focus, .checkout-area .billing-details .form-group .nice-select .option.selected.focus {
-  background-color: #19ce67 !important;
+  background-color: #107dac !important;
   color: #ffffff !important;
 }
 
@@ -3847,7 +3847,7 @@ textarea.form-control {
   cursor: pointer;
   display: block;
   font-weight: 600;
-  color: #19ce67;
+  color: #107dac;
   position: relative;
   margin-bottom: 8px;
 }
@@ -3868,7 +3868,7 @@ textarea.form-control {
   content: '';
   width: 12px;
   height: 12px;
-  background: #19ce67;
+  background: #107dac;
   position: absolute;
   top: 6px;
   left: 3px;
@@ -3912,7 +3912,7 @@ textarea.form-control {
   content: '';
   width: 12px;
   height: 12px;
-  background: #19ce67;
+  background: #107dac;
   position: absolute;
   top: 6px;
   left: 3px;
@@ -3986,8 +3986,8 @@ textarea.form-control {
 }
 
 .shop-details-area .product-details-desc .product-review .rating-count:hover {
-  color: #19ce67;
-  border-color: #19ce67;
+  color: #107dac;
+  border-color: #107dac;
 }
 
 .shop-details-area .product-details-desc .product-add-to-cart {
@@ -4210,7 +4210,7 @@ textarea.form-control {
 .shop-details-area .product-details-desc .custom-payment-options .payment-methods a i {
   font-size: 20px;
   background-color: #def5ee;
-  color: #19ce67;
+  color: #107dac;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -4222,7 +4222,7 @@ textarea.form-control {
 }
 
 .shop-details-area .product-details-desc .custom-payment-options .payment-methods a:hover i {
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
 }
 
@@ -4269,8 +4269,8 @@ textarea.form-control {
 
 .shop-details-area .products-details-tab .tabs li a:hover {
   color: #ffffff;
-  background-color: #19ce67;
-  border-color: #19ce67;
+  background-color: #107dac;
+  border-color: #107dac;
 }
 
 .shop-details-area .products-details-tab .tabs li a:hover .dot {
@@ -4283,8 +4283,8 @@ textarea.form-control {
 
 .shop-details-area .products-details-tab .tabs li a:focus {
   color: #ffffff;
-  background-color: #19ce67;
-  border-color: #19ce67;
+  background-color: #107dac;
+  border-color: #107dac;
 }
 
 .shop-details-area .products-details-tab .tabs li a:focus .dot {
@@ -4301,8 +4301,8 @@ textarea.form-control {
 
 .shop-details-area .products-details-tab .tabs li.current a {
   color: #ffffff;
-  background-color: #19ce67;
-  border-color: #19ce67;
+  background-color: #107dac;
+  border-color: #107dac;
 }
 
 .shop-details-area .products-details-tab .tabs li.current a .dot {
@@ -4491,7 +4491,7 @@ Preloader Area Style*/
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #19ce67;
+  background-color: #107dac;
   top: 0;
   left: 0;
   z-index: 99999;
@@ -4562,7 +4562,7 @@ Go Top Style*/
   cursor: pointer;
   top: 120%;
   right: 5%;
-  background-color: #19ce67;
+  background-color: #107dac;
   z-index: 4;
   width: 40px;
   text-align: center;
@@ -4611,7 +4611,7 @@ Video wave Style*/
   line-height: 89px;
   text-align: center;
   border-radius: 50px;
-  color: #19ce67;
+  color: #107dac;
   position: relative;
   top: 3px;
   z-index: 1;
@@ -4662,7 +4662,7 @@ Video wave Style*/
 }
 
 .video-btn:hover {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 .video-btn:hover i {
@@ -4670,7 +4670,7 @@ Video wave Style*/
 }
 
 .video-btn:hover::after, .video-btn:hover::before {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 @-webkit-keyframes ripple {
@@ -4719,7 +4719,7 @@ Section Title Area Style*/
 }
 
 .section-title .top-title {
-  color: #19ce67;
+  color: #107dac;
   font-size: 14px;
   display: block;
   margin-bottom: 10px;
@@ -4735,7 +4735,7 @@ Section Title Area Style*/
 }
 
 .section-title h2 span {
-  color: #19ce67;
+  color: #107dac;
 }
 
 .section-title h2:last-child {
@@ -4779,7 +4779,7 @@ Page-navigation Area Style*/
 .pagination-area .page-numbers {
   width: 38px;
   height: 38px;
-  background-color: #19ce67;
+  background-color: #107dac;
   color: #ffffff;
   text-align: center;
   display: inline-block;
@@ -4949,7 +4949,7 @@ body.page-template-dark-homepage {
 }
 
 .page-template-dark-homepage .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #19ce67;
+  background-color: #107dac;
 }
 
 /*====================================================

@@ -30,6 +30,17 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
+                                <label>Category <span class="-req">*</span></label>
+                                <select class="form-control" name="category" required>
+                                    <option value="">-- Select --</option>
+                                    @foreach (App\Models\MasterCategories::where('is_deleted','0')->get() as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
                                 <label>Name <span class="-req">*</span></label>
                                 <input name="name" type="text" class="form-control" placeholder="Name" required>
                             </div>

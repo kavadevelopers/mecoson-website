@@ -7,14 +7,14 @@
                 icon: 'success',
                 title: 'Success',
                 text: msg,
-                confirmButtonColor: '#19ce67',
+                confirmButtonColor: '#107dac',
             })
         }else{
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
                 text: msg,
-                confirmButtonColor: '#19ce67',
+                confirmButtonColor: '#107dac',
             })
         }
     }

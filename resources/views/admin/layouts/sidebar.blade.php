@@ -67,6 +67,29 @@
                 </a>
             </li>
 
+            <ul class="pcoded-item pcoded-left-item">
+                <li class="pcoded-hasmenu {{ CommonHelper::adminMenu(2,['cms'])[2] }}">
+                    <a href="javascript:void(0)">
+                        <span class="pcoded-micon"><i class="fa fa-book"></i></span>
+                        <span class="pcoded-mtext">CMS</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li class="{{ CommonHelper::adminMenu(3,['home-sliders'],'cms')[1] }}">
+                            <a href="{{ CommonHelper::admin('cms/home-sliders') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Home Sliders</span>
+                            </a>
+                        </li>
+                        <li class="{{ CommonHelper::adminMenu(3,['categories'],'cms')[1] }}">
+                            <a href="{{ CommonHelper::admin('cms/categories') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Categories</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
             @if (CommonHelper::hasPermission([2,3]) || Auth::guard('admin')->user()->admin_type == '0')
                 <li class="{{ CommonHelper::adminMenu(2,['settings'])[2] }}">
                     <a href="{{ CommonHelper::admin('settings') }}">

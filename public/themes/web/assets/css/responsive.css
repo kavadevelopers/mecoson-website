@@ -1132,7 +1132,7 @@ Max width 1700px */
 Only Mobile Menu Max width 991px */
 @media only screen and (max-width: 991px) {
   .mean-container .mean-bar {
-    background-color: #19ce67;
+    background-color: #107dac;
     height: 70px;
   }
   .mean-container a.meanmenu-reveal {
@@ -1161,10 +1161,10 @@ Only Mobile Menu Max width 991px */
     border-top: 1px solid #17222b;
   }
   .mobile-nav.mean-container .mean-nav ul li a:hover {
-    color: #19ce67;
+    color: #107dac;
   }
   .mobile-nav.mean-container .mean-nav ul li a.active {
-    color: #19ce67;
+    color: #107dac;
   }
   .nav-area .others-option {
     display: none;

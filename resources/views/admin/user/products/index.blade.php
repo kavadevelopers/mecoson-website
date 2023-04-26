@@ -27,9 +27,9 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">Banner</th>
+                                    <th>Category</th>
                                     <th>Name</th>
                                     <th>Price</th>
-                                    <th>Short Description</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -39,9 +39,9 @@
                                         <td class="text-center">
                                             <img src="{{ CommonHelper::getProductImage($value->image) }}" class="list-image-thumbnail-landscap">
                                         </td>
+                                        <td>{{ $value->_category->name }}</td>
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->price }}</td>
-                                        <td>{!! CommonHelper::read_more_popup($value->short_description,50) !!}</td>
                                         <td class="text-center">
                                             <a href="{{ CommonHelper::admin('products/update/'.encrypt($value->id)) }}" class="btn btn-primary btn-mini" title="Edit">
                                                 <i class="fa fa-pencil"></i>

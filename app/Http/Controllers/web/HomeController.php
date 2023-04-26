@@ -4,6 +4,8 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactEnquiryModel;
+use App\Models\HomeSliderModel;
+use App\Models\MasterCategories;
 use App\Models\ProductEnquiryModel;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
@@ -15,7 +17,14 @@ class HomeController extends Controller
     
     public function home(){
         $data['_title'] = 'Home';
+        $data['banners'] = HomeSliderModel::orderby('sort','asc')->get();
         return view('web.home')->with($data);
+    }
+
+    public function products(){
+        $data['_title'] = 'Products';
+        $data['list']   = ProductModel::with('_category')->orderby('name','asc');
+        return view('web.product.all')->with($data);
     }
 
     public function about(){
@@ -33,7 +42,18 @@ class HomeController extends Controller
         if($slug && $product){
             $data['_title'] = $product->name;
             $data['product']    = $product;
-            return view('web.product')->with($data);
+            return view('web.product.item')->with($data);
+        }else{
+            abort('404');
+        }
+    }
+
+    public function category($slug = false){
+        $category = MasterCategories::where('slug',$slug)->first();
+        if($slug && $category){
+            $data['_title'] = $category->name;
+            $data['list']   = ProductModel::where('category',$category->id)->with('_category')->orderby('name','asc');
+            return view('web.product.all')->with($data);
         }else{
             abort('404');
         }
