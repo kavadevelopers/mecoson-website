@@ -49,7 +49,7 @@
 		<!-- START PRELOADER AREA -->
 		<div class="preloader">
 			<div class="lds-ripple">
-				<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_kmemgsc8.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+				<lottie-player src="{{ url('themes/lottie/loading.json') }}"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
 			</div>
 		</div>
 		<!-- END PRELOADER AREA -->
@@ -143,7 +143,30 @@
 										<li class="nav-item">
 											<a href="{{ url('about-us') }}" class="nav-link">
 												About Us
+												<i class="bx bx-plus"></i>
 											</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="{{ url('about-us') }}" class="nav-link">
+														History & Development 
+													</a>
+												</li>
+												<li class="nav-item">
+													<a href="{{ url('mission-vision-values') }}" class="nav-link">
+														Mission, Vision & Values
+													</a>
+												</li>
+												<li class="nav-item">
+													<a href="{{ url('quality-policy') }}" class="nav-link">
+														Quality Policy
+													</a>
+												</li>
+												<li class="nav-item">
+													<a href="{{ url('global-presence') }}" class="nav-link">
+														Global Presence
+													</a>
+												</li>
+											</ul>
 										</li>
 										@if(count($categories) > 0)
 											<li class="nav-item">
@@ -225,7 +248,7 @@
 					<div class="col-lg-3 col-md-6">
 						<div class="single-widget">
 							<a href="{{ url('') }}">
-								<img src="{{ url('themes/logos/logo-footer.png') }}" alt="Image">
+								<img src="{{ url('themes/logos/logo-footer.png') }}" style="margin-bottom: 0;" alt="Image">
 							</a>
 
 							<p>We pursue diversity in our workforce, our markets, and in our services because we recognize that optimum solutions require different backgrounds, new perspectives, and open minds.</p>
@@ -295,12 +318,12 @@
 									</a>
 								</li>
 								<li>
-									<a href="{{ url('') }}">
+									<a href="{{ url('mission-vision-values') }}">
 										Vision & Mission
 									</a>
 								</li>
 								<li>
-									<a href="{{ url('') }}">
+									<a href="{{ url('quality-policy') }}">
 										Quality Assurance
 									</a>
 								</li>
@@ -317,11 +340,6 @@
 								<li>
 									<a href="{{ url('') }}">
 										Career     
-									</a>
-								</li>
-								<li>
-									<a href="{{ url('') }}">
-										News & Events
 									</a>
 								</li>
 								<li>

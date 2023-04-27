@@ -29,6 +29,9 @@ Route::prefix('contact-us')->group(function(){
 });
 
 Route::get('about-us', [HomeController::class,'about']);
+Route::get('mission-vision-values', [HomeController::class,'missionVisonValues']);
+Route::get('quality-policy', [HomeController::class,'qualityPolicy']);
+Route::get('global-presence', [HomeController::class,'globalPresence']);
 
 Route::get('category/{slug}', [HomeController::class,'category']);
 

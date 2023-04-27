@@ -28,8 +28,23 @@ class HomeController extends Controller
     }
 
     public function about(){
-        $data['_title'] = 'About Us';
+        $data['_title'] = 'History & Development';
         return view('web.about')->with($data);
+    }
+
+    public function missionVisonValues(){
+        $data['_title'] = 'Mission, Vision & Values';
+        return view('web.aboutmiviva')->with($data);
+    }
+
+    public function qualityPolicy(){
+        $data['_title'] = 'Quality Assurance';
+        return view('web.aboutquality')->with($data);
+    }
+
+    public function globalPresence(){
+        $data['_title'] = 'Global Presence';
+        return view('web.aboutglobal')->with($data);
     }
 
     public function contact(){
