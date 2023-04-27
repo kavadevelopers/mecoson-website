@@ -23,7 +23,7 @@
 <!-- START CONTACT FORM AREA --> 
 <section class="contact-form-area ptb-100">
     <div class="container">
-        <div data-aos="fade-up" data-aos-duration="1200" class="section-title">
+        <div class="section-title">
             <h2>Get In Touch</h2>
             <p>Please contact us using the form below and our team will respond shortly. </p>
         </div>
@@ -37,7 +37,7 @@
                                 <i class="bx bx-location-plus"></i>
                             </div>
                             <span>Address:</span>
-                            {{ CommonHelper::setting('web_address') }}
+                            {!! nl2br(CommonHelper::setting('web_address')) !!}
                         </li>
                         <li>
                             <div class="icon">
@@ -71,7 +71,7 @@
 </section>
 
 <!-- START CONTACT INFO AREA -->
-<section class="contact-info-area pt-100 pb-70">
+<section class="contact-info-area">
     <div class="container">
         <div class="row">
             <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-4 col-sm-6">
@@ -103,7 +103,7 @@
 <!-- START CONTACT INFO AREA -->
 
 
-<section class="contact-form-area ptb-100">
+<section class="contact-form-area pb-70 pt-100">
     <div class="container">
         <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-12">
             <div class="contact-form">

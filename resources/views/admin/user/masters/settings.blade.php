@@ -42,16 +42,17 @@
                                 <input name="web_email" type="text" class="form-control" value="{{ CommonHelper::setting('web_email') }}" placeholder="Contact Email" required>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label>Contact Address <span class="-req">*</span></label>
-                                <input name="web_address" type="text" class="form-control" value="{{ CommonHelper::setting('web_address') }}" placeholder="Contact Address" required>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Google Map Embedded Url <span class="-req">*</span></label>
                                 <input name="web_google_map_url" type="text" class="form-control" value="{{ CommonHelper::setting('web_google_map_url') }}" placeholder="Google Map Embedded Url" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Contact Address <span class="-req">*</span></label>
+                                <textarea name="web_address" type="text" class="form-control" placeholder="Contact Address" required>{{ CommonHelper::setting('web_address') }}</textarea>
                             </div>
                         </div>
                     </div>

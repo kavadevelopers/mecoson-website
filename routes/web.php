@@ -39,6 +39,8 @@ Route::get('products', [HomeController::class,'products']);
 Route::get('product/{slug}', [HomeController::class,'product']);
 Route::post('product-enquiry', [HomeController::class,'enquiry']);
 
+Route::get('downloads', [HomeController::class,'downloads']);
+Route::get('career', [HomeController::class,'career']);
 
 Route::prefix('admin')->group(function(){
     Route::group(['middleware' => ['isGuest']],function(){

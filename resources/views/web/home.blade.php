@@ -58,7 +58,7 @@
                         <div class="row">
                             <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-6 col-sm-6">
                                 <div class="single-features">
-                                    <i class="flaticon-first-aid-kit"></i>
+                                    <i class="fa fa-industry"></i>
                                     <h3>Pharmaceutical Manufacturer</h3>
                                     <p>With a skilled workforce we provide pharma manufacturing facilities for tablet, capsules and syrups.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
@@ -69,7 +69,7 @@
 
                             <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-6 col-sm-6">
                                 <div class="single-features">
-                                    <i class="flaticon-medicine"></i>
+                                    <i class="fa fa-users"></i>
                                     <h3>PCD pharma Franchise</h3>
                                     <p>A growing PCD Pharma company & committed to provide high-quality healthcare services.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
@@ -91,7 +91,7 @@
                 
                             <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-6 col-sm-6">
                                 <div class="single-features">
-                                    <i class="flaticon-personal-information"></i>
+                                    <i class="fa fa-handshake-o"></i>
                                     <h3>Contract Manufacturer</h3>
                                     <p>We offer contract manufacturing for the wide range of pharma products.<br><br></p>
                                     <a href="{{ url('about-us') }}" class="read-more">
@@ -132,7 +132,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-4 col-sm-6">
                     <div class="single-counter">
-                        <i class="bx bx-certification"></i>
+                        <i class="flaticon-pills"></i>
 
                         <h2>
                             <span class="odometer" data-count="825">00</span> 
@@ -145,7 +145,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-4 col-sm-6">
                     <div class="single-counter">
-                        <i class="bx bx-check-circle"></i>
+                        <i class="fa fa-globe"></i>
                     
                         <h2>
                             <span class="odometer" data-count="23">00</span> 
@@ -182,7 +182,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-4 col-sm-6">
                     <div class="single-services">
-                        <i class="flaticon-eye"></i>
+                        <i class="fa fa-flask"></i>
                         <h3>Active Pharmaceutical Ingredients (APIs)</h3>
                         <p>With using deep technical strengths in the development of complex APIs we consistently deliver high-quality APIs.</p>
                         <a href="{{ url('products') }}" class="read-more">
@@ -193,7 +193,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-4 col-sm-6">
                     <div class="single-services">
-                        <i class="flaticon-heart"></i>
+                        <i class="flaticon-capsules"></i>
                         <h3>Nutraceuticals Supplements<br><br></h3>
                         <p>We, Mecoson Labs offer cost-effective and the quality nutraceuticals to enhance your wellbeing & general Health.</p>
                         <a href="{{ url('products') }}" class="read-more">
@@ -204,7 +204,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-4 col-sm-6">
                     <div class="single-services">
-                        <i class="flaticon-dental-care"></i>
+                        <i class="fa fa-handshake-o"></i>
                         <h3>Contract Manufacturing</h3>
                         <p>We provide contract manufacturing service for the Domestic as well as Export Markets as per our cutomer needs.</p>
                         <a href="{{ url('products') }}" class="read-more">
@@ -215,7 +215,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-4 col-sm-6">
                     <div class="single-services">
-                        <i class="flaticon-neurology"></i>
+                        <i class="flaticon-stethoscope"></i>
                         <h3>Medical & Surgical Products</h3>
                         <p>We offer innovative products and services in Medical and Surgical consumables to improve your outcomes.</p>
                         <a href="{{ url('products') }}" class="read-more">
@@ -228,7 +228,7 @@
 
                 <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-4 col-sm-6">
                     <div class="single-services">
-                        <i class="flaticon-stethoscope"></i>
+                        <i class="flaticon-cardiogram"></i>
                         <h3>Healthcare Services</h3>
                         <p> We have a powerful element of social responsibility inscribed in its values and its' concern for the society beyound the business motives.</p>
                         <a href="{{ url('products') }}" class="read-more">
@@ -252,42 +252,42 @@
             <div class="row">
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-brain"></i>
+                        <i class="fa fa-hand-o-up"></i>
                         <h3>One Stop Center</h3>
                     </div>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-medicine"></i>
+                        <i class="flaticon-pills"></i>
                         <h3>Wide Range of Products</h3>
                     </div>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-paper-plane"></i>
+                        <i class="fa fa-truck"></i>
                         <h3>Timely Delievery</h3>
                     </div>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-envelope"></i>
+                        <i class="fa fa-check-circle-o"></i>
                         <h3>Certified Company</h3>
                     </div>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-call-1"></i>
+                        <i class="fa fa-globe"></i>
                         <h3>Global Supplier</h3>
                     </div>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-2 col-sm-3">
                     <div class="single-services">
-                        <i class="flaticon-personal-information"></i>
+                        <i class="fa fa-check-square-o"></i>
                         <h3>Reliable <br><br></h3>
                     </div>
                 </div>

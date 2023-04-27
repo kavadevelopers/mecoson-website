@@ -220,6 +220,16 @@
 											</a>
 										</li>
 									</ul>
+
+									<!-- Start Other Option -->
+									<div class="others-option">
+										<div class="get-quote">
+											<a href="{{ url('contact-us') }}" class="default-btn">
+												Business Inquiry
+											</a>
+										</div>
+									</div>
+									<!-- End Other Option -->
 								</div>
 							</div>
 						</nav>
@@ -228,7 +238,7 @@
 					<!-- Menu For Mobile Device -->
 					<div class="mobile-nav">
 						<a href="{{ url('') }}" class="logo">
-							<img src="{{ url('themes/logos/logo.png') }}" alt="Logo">
+							<img src="{{ url('themes/logos/logo-footer.png') }}" alt="Logo">
 						</a>
 					</div>
 				</div>
@@ -388,7 +398,7 @@
 								<li>
 									<i class="bx bx-location-plus"></i>
 									<span>Address:</span> 
-									{{ CommonHelper::setting('web_address') }}
+									{!! nl2br(CommonHelper::setting('web_address')) !!}
 								</li>
 							</ul>
 						</div>

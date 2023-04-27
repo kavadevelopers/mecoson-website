@@ -52,6 +52,16 @@ class HomeController extends Controller
         return view('web.contact')->with($data);
     }
 
+    public function career(){
+        $data['_title'] = 'Career';
+        return view('web.career')->with($data);
+    }
+
+    public function downloads(){
+        $data['_title'] = 'Downloads';
+        return view('web.downloads')->with($data);
+    }
+
     public function product($slug = false){
         $product = ProductModel::where('slug',$slug)->first();
         if($slug && $product){
