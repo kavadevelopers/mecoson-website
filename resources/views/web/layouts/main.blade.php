@@ -36,7 +36,7 @@
 		<link rel="stylesheet" href="{{ url('themes/web/assets/css/style.css') }}">
 		<!-- RESPONSIVE CSS -->
 		<link rel="stylesheet" href="{{ url('themes/web/assets/css/responsive.css') }}">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         @include('web.layouts.style')
 
 		@php
@@ -181,7 +181,7 @@
 															$products = App\Models\ProductModel::select('name','id','slug')->where('category',$category->id)->orderby('name','asc');
 														@endphp
 														<li class="nav-item">
-															<a href="{{ url('product/'.$category->slug) }}" class="nav-link">
+															<a href="{{ url('category/'.$category->slug) }}" class="nav-link">
 																{{ $category->name }}
 																@if ($products->count() > 0)
 																	<i class="bx bx-plus"></i>
