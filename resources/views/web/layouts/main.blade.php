@@ -338,17 +338,17 @@
 									</a>
 								</li>
 								<li>
-									<a href="{{ url('') }}">
+									<a href="{{ url('products') }}">
 										Products
 									</a>
 								</li>
 								<li>
-									<a href="{{ url('') }}">
+									<a href="{{ url('downloads') }}">
 										Downloads       
 									</a>
 								</li>
 								<li>
-									<a href="{{ url('') }}">
+									<a href="{{ url('career') }}">
 										Career     
 									</a>
 								</li>
