@@ -32,7 +32,7 @@
                 <div class="single-services">
                     <i class="fa fa-building"></i>
                     <h3>Company Profile</h3>
-                    <a href="{{ url('uploads/downloads/company-profile.pdf') }}" class="read-more" download>
+                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','company_profile')->first()->value }}" class="read-more" download="company_profile.pdf">
                         Download
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="single-services">
                     <i class="fa fa-list"></i>
                     <h3>Product List</h3>
-                    <a href="{{ url('uploads/downloads/product-list.pdf') }}" class="read-more" download>
+                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','product_list')->first()->value }}" class="read-more" download="product-list.pdf">
                         Download
                     </a>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="single-services">
                     <i class="fa fa-book"></i>
                     <h3>Product Brochure</h3>
-                    <a href="{{ url('uploads/downloads/product-brochure.pdf') }}" class="read-more" download>
+                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','product_brochure')->first()->value }}" class="read-more" download="product-brochure.pdf">
                         Download
                     </a>
                 </div>

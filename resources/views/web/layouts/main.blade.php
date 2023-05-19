@@ -205,7 +205,20 @@
 										<li class="nav-item">
 											<a href="{{ url('career') }}" class="nav-link">
 												Career
+												<i class="bx bx-plus"></i>
 											</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item">
+													<a href="{{ url('career') }}" class="nav-link">
+														Career with {{ CommonHelper::setting('app_name') }}
+													</a>
+												</li>
+												<li class="nav-item">
+													<a href="{{ url('current-jobs') }}" class="nav-link">
+														Current Job Openings
+													</a>
+												</li>
+											</ul>
 										</li>
 
 										<li class="nav-item">
@@ -224,7 +237,7 @@
 									<!-- Start Other Option -->
 									<div class="others-option">
 										<div class="get-quote">
-											<a href="{{ url('contact-us') }}" class="default-btn">
+											<a href="{{ url('business-enquiry') }}" class="default-btn">
 												Business Inquiry
 											</a>
 										</div>

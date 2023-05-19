@@ -2977,7 +2977,7 @@ textarea.form-control {
 .contact-form-area .contact-form form input, 
 .contact-form-area .contact-form form textarea {
   border-radius: 0;
-  height: 60px;
+  height: 40px;
   border: 1px solid #ebebeb;
   background-color: #f4f9fd;
   -webkit-transition: 0.5s;

@@ -201,7 +201,7 @@
         if (input.files && input.files[0]) {
             var FileSize = input.files[0].size / 1024 / 1024; // in MB
             var extension = input.files[0].name.substring(input.files[0].name.lastIndexOf('.')+1);
-            if (FileSize > 10) {
+            if (FileSize > 2) {
                 PNOTY("Maxiumum File Size Is 2 Mb.",'error');
                 input.value = '';
                 return false;

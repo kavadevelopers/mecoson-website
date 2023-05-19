@@ -28,7 +28,7 @@ class AuthController extends BaseController
                     return CommonHelper::retJson(['_return' => false,'msg' => 'Your account is blocked please contact administrator.']);    
                 }
             }else{
-                return CommonHelper::retJson(['_return' => false,'msg' => 'Username Not Registered']);    
+                return CommonHelper::retJson(['_return' => false,'msg' => 'Username and password do not match']);    
             }
         }else{
             return CommonHelper::retJson(['_return' => false,'msg' => 'Username Not Registered']);

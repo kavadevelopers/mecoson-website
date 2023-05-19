@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\CMSPagesModel;
 use App\Models\ContactEnquiryModel;
 use App\Models\HomeSliderModel;
 use App\Models\MasterCategories;
@@ -52,9 +53,20 @@ class HomeController extends Controller
         return view('web.contact')->with($data);
     }
 
+    public function business(){
+        $data['_title'] = 'Inquiry';
+        return view('web.business')->with($data);
+    }
+
     public function career(){
         $data['_title'] = 'Career';
         return view('web.career')->with($data);
+    }
+
+    public function currentJobs(){
+        $data['_title'] = 'Current Jobs';
+        $data['item'] = CMSPagesModel::where('slug','current-jobs')->first();
+        return view('web.current-jobs')->with($data);
     }
 
     public function downloads(){
@@ -96,6 +108,20 @@ class HomeController extends Controller
 
         Session::flash('success', 'Enquiry Sent');
 	    return Redirect('contact-us');
+    }
+
+    public function businessSave(Request $rec){
+        
+        ContactEnquiryModel::create([
+            'name'  => $rec->name,
+            'email'  => $rec->email,
+            'phone'  => $rec->phone,
+            'subject'  => $rec->subject,
+            'description'  => $rec->message,
+        ]);
+
+        Session::flash('success', 'Enquiry Sent');
+	    return Redirect('business-enquiry');
     }
 
     public function enquiry(Request $rec){

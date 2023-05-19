@@ -4,6 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use App\Helpers\CommonHelper;
 use App\Http\Controllers\Controller;
+use App\Models\CMSPagesModel;
+use App\Models\DownloadsModel;
 use App\Models\HomeSliderModel;
 use App\Models\MasterCategories;
 use Illuminate\Http\Request;
@@ -12,6 +14,81 @@ use Illuminate\Support\Facades\Storage;
 
 class CMSController extends Controller{
 
+    public function filesList(){
+        $data['_title'] = 'Downloads';
+        return view('admin.user.cms.downloads',$data);
+    }
+
+    public function filesSave(Request $rec){
+        
+        
+        if ($rec->hasFile('company_profile')) {
+            $image      = $rec->file('company_profile');
+            $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+
+                $item = DownloadsModel::where('item','company_profile')->first();
+
+                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+                }
+
+                DownloadsModel::where('item','company_profile')->update(['value' => $imgName]);
+            }
+        }
+
+        if ($rec->hasFile('product_list')) {
+            $image      = $rec->file('product_list');
+            $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+                $item = DownloadsModel::where('item','product_list')->first();
+
+                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+                }
+
+                DownloadsModel::where('item','product_list')->update(['value' => $imgName]);
+            }
+        }
+
+        if ($rec->hasFile('product_brochure')) {
+            $image      = $rec->file('product_brochure');
+            $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+
+                $item = DownloadsModel::where('item','product_brochure')->first();
+
+                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+                }
+
+                DownloadsModel::where('item','product_brochure')->update(['value' => $imgName]);
+            }
+        }
+
+        Session::flash('success', 'Documents Updated');
+	    return Redirect(CommonHelper::admin('cms/files'));
+    }
+
+    public function currentJobs(){
+        $data['_title'] = 'Current Jobs';
+        $data['item']   = CMSPagesModel::where('slug','current-jobs')->first();
+        return view('admin.user.cms.page',$data);
+    }
+
+    public function currentSave(Request $rec){
+        $row = CMSPagesModel::find($rec->item);
+        if($row){
+            $row->description = CommonHelper::isColValue($rec->description);
+            $row->save();
+
+            Session::flash('success', 'Page Updated');
+            return Redirect(CommonHelper::admin('cms/'.$rec->slug));
+            
+        }else{
+            return Redirect(CommonHelper::admin('cms/'.$rec->slug));
+        }
+    }
 
     public function categoriesList(){
         $data['_title'] = 'Categories';

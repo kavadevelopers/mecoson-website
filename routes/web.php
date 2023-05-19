@@ -28,6 +28,11 @@ Route::prefix('contact-us')->group(function(){
     Route::post('', [HomeController::class,'contactSave']);
 });
 
+Route::prefix('business-enquiry')->group(function(){
+    Route::get('', [HomeController::class,'business']);
+    Route::post('', [HomeController::class,'businessSave']);
+});
+
 Route::get('about-us', [HomeController::class,'about']);
 Route::get('mission-vision-values', [HomeController::class,'missionVisonValues']);
 Route::get('quality-policy', [HomeController::class,'qualityPolicy']);
@@ -41,6 +46,7 @@ Route::post('product-enquiry', [HomeController::class,'enquiry']);
 
 Route::get('downloads', [HomeController::class,'downloads']);
 Route::get('career', [HomeController::class,'career']);
+Route::get('current-jobs', [HomeController::class,'currentJobs']);
 
 Route::prefix('admin')->group(function(){
     Route::group(['middleware' => ['isGuest']],function(){
@@ -94,6 +100,16 @@ Route::prefix('admin')->group(function(){
                 Route::get('edit/{id}', [CMSController::class,'categoriesEdit']);
                 Route::post('save', [CMSController::class,'categoriesSave']);
                 Route::post('update', [CMSController::class,'categoriesUpdate']);
+            });
+
+            Route::prefix('current-jobs')->group(function(){
+                Route::get('', [CMSController::class,'currentJobs']);
+                Route::post('save', [CMSController::class,'currentSave']);
+            });
+
+            Route::prefix('files')->group(function(){
+                Route::get('', [CMSController::class,'filesList']);
+                Route::post('save', [CMSController::class,'filesSave']);
             });
         });
 

@@ -86,6 +86,18 @@
                                 <span class="pcoded-mtext">Categories</span>
                             </a>
                         </li>
+                        <li class="{{ CommonHelper::adminMenu(3,['current-jobs'],'cms')[1] }}">
+                            <a href="{{ CommonHelper::admin('cms/current-jobs') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Current Jobs</span>
+                            </a>
+                        </li>
+                        <li class="{{ CommonHelper::adminMenu(3,['files'],'cms')[1] }}">
+                            <a href="{{ CommonHelper::admin('cms/files') }}">
+                                <span class="pcoded-micon"><i class="fa fa-list"></i></span>
+                                <span class="pcoded-mtext">Downloads</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

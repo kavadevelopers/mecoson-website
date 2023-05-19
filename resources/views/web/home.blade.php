@@ -60,7 +60,7 @@
                                 <div class="single-features">
                                     <i class="fa fa-industry"></i>
                                     <h3>Pharmaceutical Manufacturer</h3>
-                                    <p>With a skilled workforce we provide pharma manufacturing facilities for tablet, capsules and syrups.</p>
+                                    <p>With a skilled workforce we provide pharma manufacturing facilities.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
                                         Read More
                                     </a>
@@ -71,7 +71,7 @@
                                 <div class="single-features">
                                     <i class="fa fa-users"></i>
                                     <h3>PCD pharma Franchise</h3>
-                                    <p>A growing PCD Pharma company & committed to provide high-quality healthcare services.</p>
+                                    <p>A growing PCD Pharma company to provide high-quality services.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
                                         Read More
                                     </a>
@@ -82,7 +82,7 @@
                                 <div class="single-features">
                                     <i class="flaticon-paper-plane"></i>
                                     <h3>Exporters</h3>
-                                    <p>With an astounding emergence in the global market we become fastest growing exporters.</p>
+                                    <p>With astounding growth globally, we are the fastest-growing exporters.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
                                         Read More
                                     </a>
@@ -93,7 +93,7 @@
                                 <div class="single-features">
                                     <i class="fa fa-handshake-o"></i>
                                     <h3>Contract Manufacturer</h3>
-                                    <p>We offer contract manufacturing for the wide range of pharma products.<br><br></p>
+                                    <p>We offer contract manufacturing for the wide range of pharma products.</p>
                                     <a href="{{ url('about-us') }}" class="read-more">
                                         Read More
                                     </a>
@@ -242,7 +242,7 @@
     <!-- END SERVICES AREA -->
 
     <!-- START WHY CHOOSE AREA -->
-    <section class="why-choose-area ptb-100">
+    <section class="why-choose-area ptb-100" style="padding-top: 50px;padding-bottom: 35px;">
         <div class="container">
             <div data-aos="fade-up" data-aos-duration="1200" class="section-title">
                 <span class="top-title">Why Choose Us</span>

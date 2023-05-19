@@ -33,9 +33,13 @@
                     <p>Utilizing experience and success in the domestic market, in the year 2017, we have extended our business from domestic market to international market. We have expanded our range of products which includes Pharmaceutical Formulations, Dental Products and Instruments, Medical and Surgical Disposables, APIs and Chemicals and Contract Manufacturing.</p>
                 </div>
             </div>
+            <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-12">
+                <img src="{{ url('themes/web/img/about-history.jpg') }}" />
+            </div>
         </div>
     </div>
 </section>
+
 <!-- END ABOUT AREA -->
 
 @stop

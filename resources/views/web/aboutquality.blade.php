@@ -33,6 +33,9 @@
                     <p>Products we supply are in compliance with global standards and which is globally approved and acceptable. Also, Mecoson Labs follows the standards in manufacturing which are given by FDA Approved facilities. We understand the need for high-quality drugs at convinient price and this is the reason, we are committed to fulfilling this demand with our quality products.</p> 
                 </div>
             </div>
+            <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-12">
+                <img src="{{ url('themes/web/img/about-quality.png') }}" />
+            </div>
         </div>
     </div>
 </section>
