@@ -23,7 +23,7 @@
                         </div>    
                     @endif
 
-                    <p>{{ nl2br($product->short_description) }}</p>
+                    <p>{!! nl2br($product->short_description) !!}</p>
 
                     {{-- <div class="custom-payment-options">
                         <span>Share Now:</span>
