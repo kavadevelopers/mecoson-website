@@ -5,13 +5,13 @@
 <section class="shop-details-area ptb-100">
     <div class="container">
         <div class="row align-items-center">
-            <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-6 col-md-12">
+            <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-4 col-md-6">
                 <div class="product-details-image">
                     <img src="{{ CommonHelper::getProductImage($product->image) }}" alt="Image">
                 </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-6 col-md-12">
+            <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-8 col-md-6">
                 <div class="product-details-desc">
                     <span class="top-title">{{ $product->_category->name }}</span>
                     <h3>{{ $product->name }}</h3>

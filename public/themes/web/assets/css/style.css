@@ -3311,7 +3311,7 @@ textarea.form-control {
   transition: all 0.5s;
 }
 
-.single-shop .purchase-bar ul li a:hover i {
+/* .single-shop .purchase-bar ul li a:hover i {
   background-color: #107dac;
   color: #ffffff;
 }
@@ -3328,7 +3328,7 @@ textarea.form-control {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-}
+} */
 
 .product-slider .single-shop {
   margin-left: 20px;

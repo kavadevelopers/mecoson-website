@@ -12,7 +12,7 @@
         <div class="row">
             @if ($list->count() > 0)
                 @foreach ($list->get() as $product)
-                    <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="single-shop">
                             <a href="{{ url('product/'.$product->slug) }}">
                                 <div class="shop-img">
