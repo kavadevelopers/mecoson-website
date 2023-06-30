@@ -2,6 +2,7 @@
 
 <h4>Steps to Install</h4>
 <ol>
+    <li>Must need php version <strong>8.2.0</strong></li>
     <li>setup envirnment variables at .env file</li>
     <li>run composer install to install vendors (third party library)</li>
     <li>

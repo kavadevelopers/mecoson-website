@@ -2,19 +2,33 @@
 
 namespace App\Http\Controllers\web;
 
+use App\Helpers\CommonHelper;
+use App\Helpers\PMailer;
 use App\Http\Controllers\Controller;
 use App\Models\CMSPagesModel;
 use App\Models\ContactEnquiryModel;
+use App\Models\DownloadsModel;
 use App\Models\HomeSliderModel;
 use App\Models\MasterCategories;
 use App\Models\ProductEnquiryModel;
 use App\Models\ProductModel;
+use App\Models\SettingModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
+
+    public function test(){
+        $data['name'] = 'Kava';
+        $data['email'] = 'Kava@gmail.com';
+        $data['mobile'] = '9898375981';
+        $data['subject'] = 'Sample Email';
+        $data['message'] = 'Sample Email message';
+        $body = view('emails.inquiry',$data)->render();
+        PMailer::send('mehul9921@gmail.com','test email',$body);
+    }
     
     public function home(){
         $data['_title'] = 'Home';
@@ -71,6 +85,7 @@ class HomeController extends Controller
 
     public function downloads(){
         $data['_title'] = 'Downloads';
+        $data['list'] = DownloadsModel::orderby('sort','asc')->get();
         return view('web.downloads')->with($data);
     }
 
@@ -106,6 +121,14 @@ class HomeController extends Controller
             'description'  => $rec->message,
         ]);
 
+        $data['name'] = $rec->name;
+        $data['email'] = $rec->email;
+        $data['mobile'] = $rec->phone;
+        $data['subject'] = $rec->subject;
+        $data['message'] = $rec->message;
+        $body = view('emails.inquiry',$data)->render();
+        PMailer::send(CommonHelper::setting('mail_notification_email'),'Inquiry - '.$rec->subject,$body);
+
         Session::flash('success', 'Enquiry Sent');
 	    return Redirect('contact-us');
     }
@@ -120,6 +143,14 @@ class HomeController extends Controller
             'description'  => $rec->message,
         ]);
 
+        $data['name'] = $rec->name;
+        $data['email'] = $rec->email;
+        $data['mobile'] = $rec->phone;
+        $data['subject'] = $rec->subject;
+        $data['message'] = $rec->message;
+        $body = view('emails.inquiry',$data)->render();
+        PMailer::send(CommonHelper::setting('mail_notification_email'),'Inquiry - '.$rec->subject,$body);
+
         Session::flash('success', 'Enquiry Sent');
 	    return Redirect('business-enquiry');
     }
@@ -133,6 +164,14 @@ class HomeController extends Controller
             'subject'  => $rec->subject,
             'description'  => $rec->message,
         ]);
+
+        $data['name'] = $rec->name;
+        $data['email'] = $rec->email;
+        $data['mobile'] = $rec->phone;
+        $data['subject'] = $rec->subject;
+        $data['message'] = $rec->message;
+        $body = view('emails.inquiry',$data)->render();
+        PMailer::send(CommonHelper::setting('mail_notification_email'),'Inquiry - '.$rec->subject,$body);
 
         Session::flash('success', 'Enquiry Sent');
 	    return Redirect::back();

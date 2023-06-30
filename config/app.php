@@ -213,6 +213,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
 
         'CommonHelper' => App\Helpers\CommonHelper::class,
+        'PMailer' => App\Helpers\PMailer::class,
     ])->toArray(),
 
 ];

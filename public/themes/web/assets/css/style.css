@@ -2196,6 +2196,14 @@ textarea.form-control {
   background-image: url(../../assets/img/page-title-bg/11.jpg);
 }
 
+.page-title-area.bg-12 {
+  background-image: url(../../assets/img/page-title-bg/12.jpg);
+}
+
+.page-title-area.bg-13 {
+  background-image: url(../../assets/img/page-title-bg/13.jpg);
+}
+
 .page-title-area::before {
   content: "";
   position: absolute;

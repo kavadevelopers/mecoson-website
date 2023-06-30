@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- START PAGE TITLE AREA -->
-<div class="page-title-area bg-3">
+<div class="page-title-area bg-6">
     <div class="container">
         <div class="page-title-content">
             <h2>{{ $_title }}</h2>
@@ -28,35 +28,17 @@
         </div>
         
         <div class="row">
-            <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-4 col-sm-6">
-                <div class="single-services">
-                    <i class="fa fa-building"></i>
-                    <h3>Company Profile</h3>
-                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','company_profile')->first()->value }}" class="read-more" download="company_profile.pdf">
-                        Download
-                    </a>
-                </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-4 col-sm-6">
-                <div class="single-services">
-                    <i class="fa fa-list"></i>
-                    <h3>Product List</h3>
-                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','product_list')->first()->value }}" class="read-more" download="product-list.pdf">
-                        Download
-                    </a>
-                </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-4 col-sm-6">
-                <div class="single-services">
-                    <i class="fa fa-book"></i>
-                    <h3>Product Brochure</h3>
-                    <a href="{{ url('uploads/cms/downloads').'/'.App\Models\DownloadsModel::where('item','product_brochure')->first()->value }}" class="read-more" download="product-brochure.pdf">
-                        Download
-                    </a>
-                </div>
-            </div>
+            @foreach ($list as $item)
+                <div data-aos="fade-up" class="col-lg-3 col-sm-6">
+                    <div class="single-services">
+                        {{-- <i class="fa fa-building"></i> --}}
+                        <h3>{{ $item->item }}</h3>
+                        <a href="{{ url('uploads/cms/downloads/'.$item->value) }}" class="read-more" download="{{ $item->item.'.'.explode('.',$item->value)[2] }}">
+                            Download
+                        </a>
+                    </div>
+                </div>    
+            @endforeach
         </div>
     </div>
 </section>

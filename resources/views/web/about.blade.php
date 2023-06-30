@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- START PAGE TITLE AREA -->
-<div class="page-title-area bg-1">
+<div class="page-title-area bg-5">
     <div class="container">
         <div class="page-title-content">
             <h2>{{ $_title }}</h2>
@@ -33,9 +33,30 @@
                     <p>Utilizing experience and success in the domestic market, in the year 2017, we have extended our business from domestic market to international market. We have expanded our range of products which includes Pharmaceutical Formulations, Dental Products and Instruments, Medical and Surgical Disposables, APIs and Chemicals and Contract Manufacturing.</p>
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-12">
-                <img src="{{ url('themes/web/img/about-history.jpg') }}" />
+            <div class="about-time-line">
+                <h3 class="text-center">Milestones Reached</h3>
+                <ul style="margin-top: 50px;">
+                    <li style="--accent-color:#41516C">
+                        <div class="date">2010</div>
+                        <div class="title">Wholesale Trading of Pharma Products</div>
+                    </li>
+                    <li style="--accent-color:#FBCA3E">
+                        <div class="date">2014</div>
+                        <div class="title">Established Marketing Company</div>
+                    </li>
+                    <li style="--accent-color:#E24A68">
+                        <div class="date">2017</div>
+                        <div class="title">Started Export of Pharma Products</div>
+                    </li>
+                    <li style="--accent-color:#1B5F8C">
+                        <div class="date">2021</div>
+                        <div class="title">Manufacturing Unit of Tablet, Capsule & Syrup</div>
+                    </li>
+                </ul>
             </div>
+            {{-- <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-12">
+                <img src="{{ url('themes/web/img/about-history.jpg') }}" />
+            </div> --}}
         </div>
     </div>
 </section>

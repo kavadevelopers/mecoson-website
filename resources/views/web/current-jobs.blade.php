@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- START PAGE TITLE AREA -->
-    <div class="page-title-area bg-7">
+    <div class="page-title-area bg-4">
         <div class="container">
             <div class="page-title-content">
                 <h2>{{ $_title }}</h2>

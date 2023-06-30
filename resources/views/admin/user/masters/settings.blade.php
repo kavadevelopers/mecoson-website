@@ -214,6 +214,13 @@
                                 <input name="smtp_from_name" type="text" class="form-control" value="{{ CommonHelper::setting('smtp_from_name') }}" placeholder="From Name" required>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Notification Emails <span class="-req">*</span></label>
+                                <input name="mail_notification_email" type="text" class="form-control" value="{{ CommonHelper::setting('mail_notification_email') }}" placeholder="Notification Emails" required>
+                                <p><b>Note:</b> Add comma saparated emails if want multiple emails.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

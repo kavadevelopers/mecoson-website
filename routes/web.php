@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('', [HomeController::class,'home']);
 Route::get('home', [HomeController::class,'home']);
 
+Route::get('test', [HomeController::class,'test']);
+
 Route::prefix('contact-us')->group(function(){
     Route::get('', [HomeController::class,'contact']);
     Route::post('', [HomeController::class,'contactSave']);
@@ -109,6 +111,7 @@ Route::prefix('admin')->group(function(){
 
             Route::prefix('files')->group(function(){
                 Route::get('', [CMSController::class,'filesList']);
+                Route::get('{id}', [CMSController::class,'filesDelete']);
                 Route::post('save', [CMSController::class,'filesSave']);
             });
         });

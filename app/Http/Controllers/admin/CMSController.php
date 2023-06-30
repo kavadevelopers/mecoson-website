@@ -16,58 +16,98 @@ class CMSController extends Controller{
 
     public function filesList(){
         $data['_title'] = 'Downloads';
+        $data['list']   = DownloadsModel::orderby('sort','asc')->get();
         return view('admin.user.cms.downloads',$data);
+    }
+
+    public function filesDelete($item = false){
+        $row = DownloadsModel::find(decrypt($item));
+        if($item && $row){
+
+            if(Storage::disk('public_upload')->exists('cms/downloads/'.$row->value)){
+                Storage::disk('public_upload')->delete('cms/downloads/'.$row->value);
+            }
+
+            $row->delete();
+
+
+
+            Session::flash('success', 'Download Deleted');
+	        return Redirect(CommonHelper::admin('cms/files'));
+        }else{
+            return Redirect(CommonHelper::admin('cms/files'));
+        }
     }
 
     public function filesSave(Request $rec){
         
         
-        if ($rec->hasFile('company_profile')) {
-            $image      = $rec->file('company_profile');
+        if ($rec->hasFile('file')) {
+            $image      = $rec->file('file');
             $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
-            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
-
-                $item = DownloadsModel::where('item','company_profile')->first();
-
-                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
-                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
-                }
-
-                DownloadsModel::where('item','company_profile')->update(['value' => $imgName]);
+            if(!Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+                $imgName = "";
             }
         }
 
-        if ($rec->hasFile('product_list')) {
-            $image      = $rec->file('product_list');
-            $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
-            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
-                $item = DownloadsModel::where('item','product_list')->first();
+        if($imgName == ""){
+            Session::flash('error', 'File upload Error.');
+	        return Redirect(CommonHelper::admin('cms/files'));
+        }else{
+            DownloadsModel::create([
+                'item'      => $rec->name,
+                'value'     => $imgName,
+                'sort'      => $rec->order
+            ]);
 
-                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
-                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
-                }
-
-                DownloadsModel::where('item','product_list')->update(['value' => $imgName]);
-            }
+            Session::flash('success', 'Documents Created');
+	        return Redirect(CommonHelper::admin('cms/files'));
         }
 
-        if ($rec->hasFile('product_brochure')) {
-            $image      = $rec->file('product_brochure');
-            $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
-            if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+        // if ($rec->hasFile('company_profile')) {
+        //     $image      = $rec->file('company_profile');
+        //     $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+        //     if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
 
-                $item = DownloadsModel::where('item','product_brochure')->first();
+        //         $item = DownloadsModel::where('item','company_profile')->first();
 
-                if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
-                    Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
-                }
+        //         if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+        //             Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+        //         }
 
-                DownloadsModel::where('item','product_brochure')->update(['value' => $imgName]);
-            }
-        }
+        //         DownloadsModel::where('item','company_profile')->update(['value' => $imgName]);
+        //     }
+        // }
 
-        Session::flash('success', 'Documents Updated');
-	    return Redirect(CommonHelper::admin('cms/files'));
+        // if ($rec->hasFile('product_list')) {
+        //     $image      = $rec->file('product_list');
+        //     $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+        //     if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+        //         $item = DownloadsModel::where('item','product_list')->first();
+
+        //         if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+        //             Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+        //         }
+
+        //         DownloadsModel::where('item','product_list')->update(['value' => $imgName]);
+        //     }
+        // }
+
+        // if ($rec->hasFile('product_brochure')) {
+        //     $image      = $rec->file('product_brochure');
+        //     $imgName   = microtime(true) . '.' . $image->getClientOriginalExtension();
+        //     if(Storage::disk('public_upload')->put('cms/downloads/'.$imgName, file_get_contents($image))) {
+
+        //         $item = DownloadsModel::where('item','product_brochure')->first();
+
+        //         if(Storage::disk('public_upload')->exists('cms/downloads/'.$item->value)){
+        //             Storage::disk('public_upload')->delete('cms/downloads/'.$item->value);
+        //         }
+
+        //         DownloadsModel::where('item','product_brochure')->update(['value' => $imgName]);
+        //     }
+        // }
+
     }
 
     public function currentJobs(){

@@ -40,7 +40,7 @@
         @include('web.layouts.style')
 
 		@php
-			$categories = App\Models\MasterCategories::select('name','id','slug')->orderby('sort','asc')->get();
+			$categories = App\Models\MasterCategories::select('name','id','slug')->where('is_deleted','0')->orderby('sort','asc')->get();
 		@endphp
     </head>
 
@@ -184,17 +184,17 @@
 															<a href="{{ url('category/'.$category->slug) }}" class="nav-link">
 																{{ $category->name }}
 																@if ($products->count() > 0)
-																	<i class="bx bx-plus"></i>
+																	{{-- <i class="bx bx-plus"></i> --}}
 																@endif
 															</a>
 															@if ($products->count() > 0)
-																<ul class="dropdown-menu">
+																{{-- <ul class="dropdown-menu">
 																	@foreach ($products->get() as $product)
 																		<li class="nav-item">
 																			<a href="{{ url('product/'.$product->slug) }}" class="nav-link">{{ $product->name }}</a>
 																		</li>	
 																	@endforeach
-																</ul>
+																</ul> --}}
 															@endif
 														</li>	
 													@endforeach

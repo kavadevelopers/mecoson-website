@@ -13,6 +13,7 @@ class DownloadsModel extends Model
 
     protected $fillable = [
         'item',
-        'value'
+        'value',
+        'sort'
     ];
 }

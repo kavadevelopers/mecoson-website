@@ -21,7 +21,7 @@
                 <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-6">
                     <div class="about-content">
                         <span class="top-title">About Us</span>
-                        <h2>Welcome to <br><span>Mecoson Labs</span></h2>
+                        <h3>Welcome to <span>Mecoson Labs</span></h3>
                         <p>We, Mesocon Labs are glad to represent ourselves as a leading pharma manufacturer, exporters, contract manufacturer and global sourcing company in the world of pharmaceutical. We believe in providing the best cutomer service, in term of Quality, Cost and Timelines.</p>
 
                         <ul>
@@ -31,15 +31,11 @@
                             </li>
                             <li>
                                 <i class="bx bx-check"></i>
-                                Medical & Surgical Products
+                                Nutraceuticals
                             </li>
                             <li>
                                 <i class="bx bx-check"></i>
                                 Active Pharmaceutical Ingredients (APIs)
-                            </li>
-                            <li>
-                                <i class="bx bx-check"></i>
-                                Nutraceuticals
                             </li>
                             <li>
                                 <i class="bx bx-check"></i>
@@ -164,12 +160,12 @@
     <section class="services-area bg-color pt-100 pb-70">
         <div class="container">
             <div data-aos="fade-up" data-aos-duration="1200" class="section-title">
-                <span class="top-title">Our Services</span>
+                <span class="top-title">Our Business</span>
                 <h2>Our Healthcare <span>Products & Services</span></h2>
             </div>
             
             <div class="row">
-                <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-4 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-6 col-sm-6">
                     <div class="single-services">
                         <i class="flaticon-medicine"></i>
                         <h3>Pharmaceutical Finished Formulations</h3>
@@ -180,7 +176,18 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-4 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-6 col-sm-6">
+                    <div class="single-services">
+                        <i class="flaticon-capsules"></i>
+                        <h3>Nutraceuticals Supplements</h3>
+                        <p>We, Mecoson Labs offer cost-effective and the quality nutraceuticals to enhance your wellbeing & general Health.</p>
+                        <a href="{{ url('products') }}" class="read-more">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-6 col-sm-6">
                     <div class="single-services">
                         <i class="fa fa-flask"></i>
                         <h3>Active Pharmaceutical Ingredients (APIs)</h3>
@@ -191,18 +198,9 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-4 col-sm-6">
-                    <div class="single-services">
-                        <i class="flaticon-capsules"></i>
-                        <h3>Nutraceuticals Supplements<br><br></h3>
-                        <p>We, Mecoson Labs offer cost-effective and the quality nutraceuticals to enhance your wellbeing & general Health.</p>
-                        <a href="{{ url('products') }}" class="read-more">
-                            Read More
-                        </a>
-                    </div>
-                </div>
+                
 
-                <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-4 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-6 col-sm-6">
                     <div class="single-services">
                         <i class="fa fa-handshake-o"></i>
                         <h3>Contract Manufacturing</h3>
@@ -213,7 +211,7 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-4 col-sm-6">
+                {{-- <div data-aos="fade-up" data-aos-duration="1600" class="col-lg-4 col-sm-6">
                     <div class="single-services">
                         <i class="flaticon-stethoscope"></i>
                         <h3>Medical & Surgical Products</h3>
@@ -235,7 +233,7 @@
                             Read More
                         </a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
