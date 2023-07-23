@@ -32,22 +32,30 @@
                     {{-- <h3>Why We Are Different</h3> --}}
                     <p>Products we supply are in compliance with global standards and which is globally approved and acceptable. Also, Mecoson Labs follows the standards in manufacturing which are given by FDA Approved facilities. We understand the need for high-quality drugs at convinient price and this is the reason, we are committed to fulfilling this demand with our quality products.</p> 
                     <p>Our products are made in well established and certified facilities having quality certificates like</p>
-                    <div class="about-content">
-                        <ul>
-                            <li><i class="bx bx-check"></i> FDCA License</li>
-                            <li><i class="bx bx-check"></i> WHO-GMP</li>
-                            <li><i class="bx bx-check"></i> GLP</li>
-                            <li><i class="bx bx-check"></i> ISO</li>
-                            <li><i class="bx bx-check"></i> FSSAI</li>
-                            <li><i class="bx bx-check"></i> HALAL</li>
-                            <li><i class="bx bx-check"></i> AYUSH</li>
-                            <li><i class="bx bx-check"></i> CE</li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-12">
-                <img src="{{ url('themes/web/img/about-quality.png') }}" />
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="about-content">
+                            <ul>
+                                <li><i class="bx bx-check"></i> FDCA License</li>
+                                <li><i class="bx bx-check"></i> WHO-GMP</li>
+                                <li><i class="bx bx-check"></i> GLP</li>
+                                <li><i class="bx bx-check"></i> ISO</li>
+                                <li><i class="bx bx-check"></i> FSSAI</li>
+                                <li><i class="bx bx-check"></i> HALAL</li>
+                                <li><i class="bx bx-check"></i> AYUSH</li>
+                                <li><i class="bx bx-check"></i> CE</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <img src="{{ url('themes/web/img/about-quality.png') }}" />
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

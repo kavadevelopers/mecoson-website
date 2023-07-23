@@ -38,6 +38,7 @@ class HomeController extends Controller
 
     public function products(){
         $data['_title'] = 'Products';
+        $data['categories'] = MasterCategories::select('name','id','slug')->where('is_deleted','0')->orderby('sort','asc')->get();
         $data['list']   = ProductModel::with('_category')->orderby('name','asc');
         return view('web.product.all')->with($data);
     }
@@ -94,6 +95,7 @@ class HomeController extends Controller
         if($slug && $product){
             $data['_title'] = $product->name;
             $data['product']    = $product;
+            $data['categories'] = MasterCategories::select('name','id','slug')->where('is_deleted','0')->orderby('sort','asc')->get();
             return view('web.product.item')->with($data);
         }else{
             abort('404');
@@ -104,8 +106,9 @@ class HomeController extends Controller
         $category = MasterCategories::where('slug',$slug)->first();
         if($slug && $category){
             $data['_title'] = $category->name;
+            $data['categories'] = MasterCategories::select('name','id','slug')->where('is_deleted','0')->orderby('sort','asc')->get();
             $data['list']   = ProductModel::where('category',$category->id)->with('_category')->orderby('name','asc');
-            return view('web.product.all')->with($data);
+            return view('web.product.category')->with($data);
         }else{
             abort('404');
         }

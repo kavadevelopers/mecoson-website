@@ -14,12 +14,12 @@
                 <div class="category b-gray">
                     <h3 class="t-blue fonarto text-center m-0">Category</h3>
                     <ul>
-                        <li class="active">
+                        <li>
                             <a href="{{ url('products') }}">All</a>
                         </li>
 
                         @foreach ($categories as $category)
-                            <li class=""><a href="{{ url('category/'.$category->slug) }}">{{ $category->name }}</a></li>    
+                            <li class="<?= $category->slug==Request::segment(2)?'active':'' ?>"><a href="{{ url('category/'.$category->slug) }}">{{ $category->name }}</a></li>    
                         @endforeach
                     </ul>
                 </div>

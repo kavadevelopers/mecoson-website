@@ -21,7 +21,7 @@
 <!-- END PAGE TITLE AREA -->
 
 <!-- START CONTACT FORM AREA --> 
-<section class="contact-form-area ptb-100">
+<section class="contact-form-area pt-100">
     <div class="container">
         <div class="section-title">
             <h2>Get In Touch</h2>
@@ -51,7 +51,8 @@
                                 <i class="bx bx-phone-call"></i>
                             </div>
                             <span>Phone:</span>
-                            {{ CommonHelper::setting('web_mobile') }}
+                            {{ CommonHelper::setting('web_mobile') }}<br>
+                            {{ CommonHelper::setting('web_mobile2') }}
                         </li>
                     </ul>
                 </div>

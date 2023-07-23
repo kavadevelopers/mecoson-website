@@ -15,7 +15,7 @@
     <!-- END HERO SLIDER AREA -->
 
     <!-- START ABOUT AREA -->
-    <section class="about-area pb-70">
+    <section class="about-area pb-70" style="margin-top: -70px;">
         <div class="container">
             <div class="row align-items-center">
                 <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-6">
@@ -165,7 +165,7 @@
             </div>
             
             <div class="row">
-                <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="1400" class="col-lg-3 col-sm-6">
                     <div class="single-services">
                         <i class="flaticon-medicine"></i>
                         <h3>Pharmaceutical Finished Formulations</h3>
@@ -176,22 +176,22 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="2000" class="col-lg-3 col-sm-6">
                     <div class="single-services">
                         <i class="flaticon-capsules"></i>
                         <h3>Nutraceuticals Supplements</h3>
-                        <p>We, Mecoson Labs offer cost-effective and the quality nutraceuticals to enhance your wellbeing & general Health.</p>
+                        <p>We, Mecoson Labs offer cost-effective and the quality nutraceuticals to enhance your wellbeing & general Health.<br><br></p>
                         <a href="{{ url('products') }}" class="read-more">
                             Read More
                         </a>
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="1800" class="col-lg-3 col-sm-6">
                     <div class="single-services">
                         <i class="fa fa-flask"></i>
                         <h3>Active Pharmaceutical Ingredients (APIs)</h3>
-                        <p>With using deep technical strengths in the development of complex APIs we consistently deliver high-quality APIs.</p>
+                        <p>With using deep technical strengths in the development of complex APIs we consistently deliver high-quality APIs.<br><br></p>
                         <a href="{{ url('products') }}" class="read-more">
                             Read More
                         </a>
@@ -200,11 +200,11 @@
 
                 
 
-                <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-6 col-sm-6">
+                <div data-aos="fade-up" data-aos-duration="2200" class="col-lg-3 col-sm-6">
                     <div class="single-services">
                         <i class="fa fa-handshake-o"></i>
                         <h3>Contract Manufacturing</h3>
-                        <p>We provide contract manufacturing service for the Domestic as well as Export Markets as per our cutomer needs.</p>
+                        <p>We provide contract manufacturing service for the Domestic as well as Export Markets as per our cutomer needs.<br><br></p>
                         <a href="{{ url('products') }}" class="read-more">
                             Read More
                         </a>

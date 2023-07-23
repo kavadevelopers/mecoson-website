@@ -38,6 +38,12 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
+                                <label>Contact Mobile2 <span class="-req">*</span></label>
+                                <input name="web_mobile2" type="text" class="form-control" value="{{ CommonHelper::setting('web_mobile2') }}" placeholder="Contact Mobile2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
                                 <label>Contact Email <span class="-req">*</span></label>
                                 <input name="web_email" type="text" class="form-control" value="{{ CommonHelper::setting('web_email') }}" placeholder="Contact Email" required>
                             </div>

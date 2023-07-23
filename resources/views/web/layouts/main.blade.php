@@ -64,7 +64,7 @@
 								<li>
 									<i class="bx bx-phone-call"></i>
 									<span>Call Us:</span>
-									<a href="tel:{{ CommonHelper::setting('web_mobile') }}">{{ CommonHelper::setting('web_mobile') }}</a>
+									<a href="tel:{{ CommonHelper::setting('web_mobile') }}">{{ CommonHelper::setting('web_mobile') }}</a>, <a href="tel:{{ CommonHelper::setting('web_mobile2') }}">{{ CommonHelper::setting('web_mobile2') }}</a>
 								</li>
 								<li>
 									<i class="bx bx-envelope"></i>
@@ -394,9 +394,12 @@
 							<ul>
 								<li>
 									<i class="bx bx-phone-call"></i>
-									<span>Hotline:</span> 
+									<span>Contact:</span> 
 									<a href="tel:{{ CommonHelper::setting('web_mobile') }}">
 										{{ CommonHelper::setting('web_mobile') }}
+									</a><br>
+									<a href="tel:{{ CommonHelper::setting('web_mobile2') }}">
+										{{ CommonHelper::setting('web_mobile2') }}
 									</a>
 								</li>
 								
