@@ -28,6 +28,7 @@
                                 <div class="form-group">
                                     <label>Banner Image <span class="-req">*</span></label>
                                     <input name="banner" type="file" class="form-control" onchange="fileExAllowed(this,'.png,.jpg,.jpeg,.PNG');" placeholder="Banner Image" maxlength="10" required>
+                                    <p><b>Note:</b>Size must be 1750w x 719h</p>
                                 </div>
                             </div>
                             <div class="col-md-12">
