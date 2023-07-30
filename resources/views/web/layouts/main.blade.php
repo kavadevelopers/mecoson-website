@@ -39,6 +39,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         @include('web.layouts.style')
 
+		<!-- JQUERY MIN JS -->
+        <script src="{{ url('themes/web/assets/js/jquery.min.js') }}"></script>
 		@php
 			$categories = App\Models\MasterCategories::select('name','id','slug')->where('is_deleted','0')->orderby('sort','asc')->get();
 		@endphp
@@ -274,7 +276,7 @@
 								<img src="{{ url('themes/logos/logo-footer.png') }}" style="margin-bottom: 0;" alt="Image">
 							</a>
 
-							<p>We pursue diversity in our workforce, our markets, and in our services because we recognize that optimum solutions require different backgrounds, new perspectives, and open minds.</p>
+							<p>A reputable pharma manufacturer and exporter, dedicated to producing high-quality pharmaceutical products. With a strong focus on research, innovation, and compliance with international standards, we cater to global markets, supplying safe and effective medications. </p>
 
 							<div class="social-area">
 								<ul>
@@ -440,8 +442,7 @@
 		</div>
 		<!-- END GO TOP AREA -->
 
-        <!-- JQUERY MIN JS -->
-        <script src="{{ url('themes/web/assets/js/jquery.min.js') }}"></script>
+        
         <!-- BOOTSTRAP MIN JS -->
         <script src="{{ url('themes/web/assets/js/bootstrap.bundle.min.js') }}"></script>
         <!-- MEANMENU MIN JS -->

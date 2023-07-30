@@ -26,10 +26,16 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <div class="inline-block-100 float-100">
-                    <ul class="list">
+                    <div class="form-group">
+                        <input type="text" id="searchProd" class="form-control" placeholder="Search product" autocomplete="off">
+                    </div>
+                </div>
+                <div class="inline-block-100 float-100" style="margin-top: 20px;">
+                    <ul class="list" id="prodList">
                         @foreach ($list->get() as $product)
                             <li><div class="text"><a href="{{ url('product/'.$product->slug) }}">{{ $product->name }}</a></div></li>
                         @endforeach
+                        <li style="display:none;" id="nodata"><div class="text">No products found</div></li>
                     </ul>
                 </div>
             </div>
@@ -37,5 +43,20 @@
     </div>
 </section>
 <!-- END SHOP AREA -->
+<script>
+    $(function(){
+        $("#searchProd").on("keyup", function() {
+            var value = this.value.toLowerCase().trim();
+            $("#prodList li").show().filter(function() {
+                return $(this).text().toLowerCase().trim().indexOf(value) == -1;
+            }).hide();
 
+            if($('#prodList li:not([style*="display: none"])').length == 0){
+                $('#nodata').show();
+            }else{
+                $('#nodata').hide();
+            }
+        });
+    })
+</script>
 @stop

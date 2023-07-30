@@ -131,7 +131,7 @@
                         <i class="flaticon-pills"></i>
 
                         <h2>
-                            <span class="odometer" data-count="825">00</span> 
+                            <span class="odometer" data-count="430">00</span> 
                             <span class="traget">+</span>
                         </h2>
 
