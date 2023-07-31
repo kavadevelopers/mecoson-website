@@ -276,7 +276,7 @@
 								<img src="{{ url('themes/logos/logo-footer.png') }}" style="margin-bottom: 0;" alt="Image">
 							</a>
 
-							<p>A reputable pharma manufacturer and exporter, dedicated to producing high-quality pharmaceutical products. With a strong focus on research, innovation, and compliance with international standards, we cater to global markets, supplying safe and effective medications. </p>
+							<p>A reputed pharmaceutical manufacturer and exporter, dedicated to producing and supplying high-quality pharmaceutical products. With a strong focus on research, innovation and compliance with international standards, cater to global markets, supplying safe and effective medications.</p>
 
 							<div class="social-area">
 								<ul>
