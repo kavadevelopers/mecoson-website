@@ -22,7 +22,7 @@
                     <div class="about-content">
                         <span class="top-title">About Us</span>
                         <h3>Welcome to <span>Mecoson Labs</span></h3>
-                        <p>We, Mesocon Labs are glad to represent ourselves as a leading pharma manufacturer, exporters, contract manufacturer and global sourcing company in the world of pharmaceutical. We believe in providing the best cutomer service, in term of Quality, Cost and Timelines.</p>
+                        <p style="text-align: justify;">We, Mesocon Labs are glad to represent ourselves as a leading pharma manufacturer, exporters, contract manufacturer and global sourcing company in the world of pharmaceutical. We believe in providing the best cutomer service, in term of Quality, Cost and Timelines.</p>
 
                         <ul>
                             <li>
