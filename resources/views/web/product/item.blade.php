@@ -24,7 +24,7 @@
                 <div class="row">
                     <div data-aos="fade-up" data-aos-duration="1200" class="col-lg-5 col-md-6">
                         <div class="product-details-image">
-                            <img src="{{ CommonHelper::getProductImage($product->image) }}" alt="Image"  style="padding: 50px;">
+                            <img src="{{ CommonHelper::getProductImage($product->image) }}" alt="Image">
                         </div>
                     </div>
         
