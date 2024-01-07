@@ -6,6 +6,7 @@
     <section class="hero-slider-area">
         <div class="hero-slider-wrap owl-carousel owl-theme">
             @foreach ($banners as $key => $banner)
+            
                 <div class="slider-item">
                     <img src="{{ CommonHelper::getHomeBanner($banner->image) }}" />
                 </div>    
