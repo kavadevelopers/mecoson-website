@@ -157,7 +157,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Linked In</label>
-                                <input name="so_linkedin_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_linkedin_url') }}" placeholder="Twitter">
+                                <input name="so_linkedin_url" type="text" class="form-control" value="{{ CommonHelper::setting('so_linkedin_url') }}" placeholder="Linked In">
                                 <p><b>Note:</b> Leave empty if no need</p>
                             </div>
                         </div>
